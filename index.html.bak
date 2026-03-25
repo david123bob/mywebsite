@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html class="scroll-smooth" lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>David Hao | Digital Architect Portfolio</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Inter:wght@300;400;500;600&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet" />
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              primary: "#4648d4",
+              secondary: "#6b38d4",
+              surface: "#fbf8fc",
+              onSurfaceVariant: "#464554",
+              inverseSurface: "#303033",
+              outlineVariant: "#c7c4d7"
+            },
+            fontFamily: {
+              headline: ["Plus Jakarta Sans"],
+              body: ["Inter"],
+              label: ["Space Grotesk"]
+            }
+          }
+        }
+      };
+    </script>
+  </head>
+  <body class="bg-surface text-slate-900 font-body">
+    <nav class="fixed top-0 w-full z-50 bg-white/80 backdrop-blur-xl">
+      <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
+        <div class="font-headline font-bold text-xl">David Hao</div>
+        <div class="hidden md:flex items-center gap-8 font-label">
+          <a class="text-primary font-bold" href="#experience">Experience</a>
+          <a class="text-slate-600 hover:text-primary" href="#skills">Skills</a>
+          <a class="text-slate-600 hover:text-primary" href="#projects">Projects</a>
+          <a class="text-slate-600 hover:text-primary" href="#education">Education</a>
+        </div>
+        <a class="bg-gradient-to-br from-primary to-indigo-500 text-white px-6 py-2 rounded-full font-label text-sm font-bold" href="mailto:david123hao@gmail.com">Contact</a>
+      </div>
+    </nav>
+
+    <main class="pt-24 space-y-28 mb-24">
+      <section class="max-w-7xl mx-auto px-6 grid grid-cols-1 lg:grid-cols-12 gap-12 items-center" id="hero">
+        <div class="lg:col-span-7 space-y-6">
+          <span class="font-label text-primary font-semibold tracking-wider px-4 py-1 rounded-full bg-indigo-100">AVAILABLE FOR HIRE</span>
+          <h1 class="text-6xl md:text-8xl font-headline font-extrabold tracking-tighter leading-none">Building scalable intelligence.</h1>
+          <p class="text-2xl font-headline text-primary">Software Engineer</p>
+          <p class="text-xl text-onSurfaceVariant max-w-xl">Senior at NYU studying Computer Science and Data Science.</p>
+          <div class="flex flex-wrap gap-4 font-label">
+            <a class="bg-gradient-to-br from-primary to-indigo-500 text-white px-8 py-4 rounded-full font-bold" href="./assets/resume.pdf" target="_blank" rel="noreferrer">Resume</a>
+            <a class="px-8 py-4 rounded-full bg-white/70" href="https://github.com/david123bob" target="_blank" rel="noreferrer">GitHub</a>
+            <a class="px-8 py-4 rounded-full bg-white/70" href="https://www.linkedin.com/in/davidhao1" target="_blank" rel="noreferrer">LinkedIn</a>
+          </div>
+        </div>
+        <div class="lg:col-span-5 relative">
+          <div class="absolute -inset-1 bg-gradient-to-r from-primary to-secondary rounded-xl blur opacity-30"></div>
+          <div class="relative bg-inverseSurface rounded-xl overflow-hidden shadow-2xl">
+            <div class="px-4 py-3 flex items-center gap-2 bg-white/10">
+              <div class="w-3 h-3 rounded-full bg-red-500"></div>
+              <div class="w-3 h-3 rounded-full bg-amber-500"></div>
+              <div class="w-3 h-3 rounded-full bg-emerald-500"></div>
+              <span class="ml-4 text-xs font-label text-slate-300">zsh — 80x24</span>
+            </div>
+            <div class="p-6 font-label text-sm md:text-base space-y-2 text-slate-100">
+              <p class="text-emerald-400">➜ <span class="text-indigo-200">~</span> whoami</p>
+              <p>David Hao: Software Engineer and ML Enthusiast.</p>
+              <p class="text-emerald-400">➜ <span class="text-indigo-200">~</span> location</p>
+              <p>New York, NY</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="max-w-7xl mx-auto px-6" id="experience">
+        <div class="mb-12">
+          <h2 class="text-4xl font-headline font-bold mb-4">Professional Path</h2>
+          <div class="h-1 w-20 bg-primary rounded-full"></div>
+        </div>
+        <div class="space-y-8">
+          <article class="bg-white/80 rounded-2xl p-6">
+            <div class="flex gap-4 items-start">
+              <img src="./assets/experience-placeholder.svg" class="w-12 h-12 rounded-xl" alt="placeholder logo" />
+              <div class="flex-1">
+                <h3 class="text-2xl font-headline font-bold">Socotec</h3>
+                <div class="flex flex-col md:flex-row md:justify-between md:items-center gap-1">
+                  <p class="font-semibold">Full Stack Software Engineer Intern</p>
+                  <span class="font-label text-sm text-onSurfaceVariant">May 2025 - Aug 2025 · New York, NY</span>
+                </div>
+                <ul class="text-onSurfaceVariant mt-3 space-y-2">
+                  <li>• Built speech-to-report workflow for Bluegen Inspect with Whisper AI, Django, React, OpenAI, and React Native.</li>
+                  <li>• Built RAG energy analysis agent using LangChain, LlamaParse, and Pinecone for 18k+ users.</li>
+                  <li>• Improved AWS Lambda report generation speed by 70%.</li>
+                </ul>
+              </div>
+            </div>
+          </article>
+          <article class="bg-white/80 rounded-2xl p-6">
+            <div class="flex gap-4 items-start">
+              <img src="./assets/experience-placeholder.svg" class="w-12 h-12 rounded-xl" alt="placeholder logo" />
+              <div class="flex-1">
+                <h3 class="text-2xl font-headline font-bold">ARobotics</h3>
+                <div class="flex flex-col md:flex-row md:justify-between md:items-center gap-1">
+                  <p class="font-semibold">Software Engineer Intern</p>
+                  <span class="font-label text-sm text-onSurfaceVariant">Jan 2021 - Aug 2023 · Ossining, NY</span>
+                </div>
+                <ul class="text-onSurfaceVariant mt-3 space-y-2">
+                  <li>• Used Django, OpenCV, and Arduino IDE for robotics systems.</li>
+                  <li>• Shipped thermal imaging and autonomous robotics features.</li>
+                </ul>
+              </div>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section class="max-w-7xl mx-auto px-6" id="projects">
+        <h2 class="text-4xl font-headline font-bold mb-4">Featured Projects</h2>
+        <p class="text-onSurfaceVariant mb-10">A showcase of systems and products I have built recently.</p>
+        <div class="flex gap-6 overflow-x-auto pb-4 snap-x snap-mandatory">
+          <article class="bg-white/80 rounded-2xl p-6 min-w-[320px] md:min-w-[520px] snap-start">
+            <div class="flex flex-col md:flex-row md:justify-between md:items-center gap-2">
+              <h3 class="text-2xl font-headline font-bold text-primary">Propel Earth</h3>
+              <span class="font-label text-sm text-onSurfaceVariant">Oct 2025 - Present</span>
+            </div>
+            <p class="font-semibold">Fullstack Developer · React · FastAPI · Firebase</p>
+            <a class="text-primary font-label font-semibold" href="https://propel.earth/" target="_blank" rel="noreferrer">Live Site</a>
+          </article>
+          <article class="bg-white/80 rounded-2xl p-6 min-w-[320px] md:min-w-[520px] snap-start">
+            <div class="flex flex-col md:flex-row md:justify-between md:items-center gap-2">
+              <h3 class="text-2xl font-headline font-bold text-primary">ApplyFlow.us</h3>
+              <span class="font-label text-sm text-onSurfaceVariant">Feb 2026 - Present</span>
+            </div>
+            <p class="font-semibold">Lead Developer · React · NodeJs · FastAPI · Supabase</p>
+            <a class="text-primary font-label font-semibold" href="https://applyflow.us" target="_blank" rel="noreferrer">Live Site</a>
+          </article>
+          <article class="bg-white/80 rounded-2xl p-6 min-w-[320px] md:min-w-[520px] snap-start">
+            <div class="flex flex-col md:flex-row md:justify-between md:items-center gap-2">
+              <h3 class="text-2xl font-headline font-bold text-primary">Weather ML Prediction</h3>
+              <span class="font-label text-sm text-onSurfaceVariant">2025</span>
+            </div>
+            <p class="font-semibold">ML Engineer · Python · Streamlit · PyTorch · Open-Meteo API</p>
+            <a class="text-primary font-label font-semibold" href="https://github.com/YardenMorad2003/weather-ml/blob/main/app.py" target="_blank" rel="noreferrer">GitHub</a>
+          </article>
+          <article class="bg-white/80 rounded-2xl p-6 min-w-[320px] md:min-w-[520px] snap-start">
+            <div class="flex flex-col md:flex-row md:justify-between md:items-center gap-2">
+              <h3 class="text-2xl font-headline font-bold text-primary">Cyber Security Project</h3>
+              <span class="font-label text-sm text-onSurfaceVariant">Mar 2025 - Apr 2025</span>
+            </div>
+            <p class="font-semibold">Designer · Go · Chatterbox · Crypto</p>
+            <a class="text-primary font-label font-semibold" href="https://github.com/david123bob/cybersecurity" target="_blank" rel="noreferrer">GitHub</a>
+          </article>
+          <article class="bg-white/80 rounded-2xl p-6 min-w-[320px] md:min-w-[520px] snap-start">
+            <div class="flex flex-col md:flex-row md:justify-between md:items-center gap-2">
+              <h3 class="text-2xl font-headline font-bold text-primary">Tech Treks</h3>
+              <span class="font-label text-sm text-onSurfaceVariant">2025</span>
+            </div>
+            <p class="font-semibold">Project Lead / Mentor · React · NodeJS · OpenAI</p>
+            <a class="text-primary font-label font-semibold" href="https://github.com/david123bob/techtrecks" target="_blank" rel="noreferrer">GitHub</a>
+          </article>
+          <article class="bg-white/80 rounded-2xl p-6 min-w-[320px] md:min-w-[520px] snap-start">
+            <div class="flex flex-col md:flex-row md:justify-between md:items-center gap-2">
+              <h3 class="text-2xl font-headline font-bold text-primary">Automated Texter</h3>
+              <span class="font-label text-sm text-onSurfaceVariant">Sept 2022 - Oct 2022 (Freshman year)</span>
+            </div>
+            <p class="font-semibold">Personal Project · JavaScript · APIs</p>
+          </article>
+          <article class="bg-white/80 rounded-2xl p-6 min-w-[320px] md:min-w-[520px] snap-start">
+            <div class="flex flex-col md:flex-row md:justify-between md:items-center gap-2">
+              <h3 class="text-2xl font-headline font-bold text-primary">Pi Delta Psi Website</h3>
+              <span class="font-label text-sm text-onSurfaceVariant">Nov 2022 - Dec 2022 (Freshman year)</span>
+            </div>
+            <p class="font-semibold">Web Developer · HTML · CSS · JavaScript</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="max-w-7xl mx-auto px-6" id="skills">
+        <h2 class="text-4xl font-headline font-bold mb-8">Technical Proficiency</h2>
+        <div class="flex flex-wrap gap-3 font-label">
+          <span class="px-4 py-2 bg-white rounded-lg">Python</span>
+          <span class="px-4 py-2 bg-white rounded-lg">TypeScript</span>
+          <span class="px-4 py-2 bg-white rounded-lg">Go</span>
+          <span class="px-4 py-2 bg-white rounded-lg">React</span>
+          <span class="px-4 py-2 bg-white rounded-lg">Node.js</span>
+          <span class="px-4 py-2 bg-white rounded-lg">FastAPI</span>
+          <span class="px-4 py-2 bg-white rounded-lg">AWS</span>
+          <span class="px-4 py-2 bg-white rounded-lg">Docker</span>
+        </div>
+      </section>
+
+      <section class="max-w-7xl mx-auto px-6" id="education">
+        <h2 class="text-4xl font-headline font-bold mb-6">Education</h2>
+        <div class="bg-white rounded-2xl p-8">
+          <h3 class="text-2xl font-headline font-bold">New York University</h3>
+          <p class="text-primary font-semibold">B.A. in Computer Science and Data Science, minors in Math and Economics</p>
+          <p class="font-label text-sm text-onSurfaceVariant mt-1">Expected May 2026 · GPA 3.9 · New York, NY</p>
+        </div>
+      </section>
+    </main>
+
+    <footer class="w-full bg-slate-50">
+      <div class="max-w-7xl mx-auto px-8 py-12 flex flex-col md:flex-row justify-between items-center gap-6">
+        <div class="text-center md:text-left">
+          <span class="text-lg font-bold font-headline">David Hao</span>
+          <p class="text-slate-500 text-sm">© 2026 David Hao.</p>
+        </div>
+        <div class="flex gap-8 font-label">
+          <a class="hover:text-primary" href="https://github.com/david123bob" target="_blank" rel="noreferrer">GitHub</a>
+          <a class="hover:text-primary" href="https://www.linkedin.com/in/davidhao1" target="_blank" rel="noreferrer">LinkedIn</a>
+          <a class="hover:text-primary" href="mailto:david123hao@gmail.com">Email</a>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

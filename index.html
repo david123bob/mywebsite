@@ -1,269 +1,477 @@
 <!DOCTYPE html>
-<html lang="en">
-    <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Portfolio</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="mediaqueries.css">
-    </head>
-    <body>
-    <nav id="desktop-nav">
-        <div class="logo">David Hao</div>
-        <div>
-            <ul class="nav-links">
-                <li><a href="#about">About</a> </li>
-                <li><a href="#experience">Experience</a></li>
-                <li><a href="#projects">Projects</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
+<html class="scroll-smooth" lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>David Hao | Digital Architect Portfolio</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Inter:wght@300;400;500;600&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet" />
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              primary: "#4648d4",
+              secondary: "#6b38d4",
+              surface: "#fbf8fc",
+              onSurfaceVariant: "#464554",
+              inverseSurface: "#303033",
+              outlineVariant: "#c7c4d7"
+            },
+            fontFamily: {
+              headline: ["Plus Jakarta Sans"],
+              body: ["Inter"],
+              label: ["Space Grotesk"]
+            }
+          }
+        }
+      };
+    </script>
+    <style>
+      .terminal-cursor {
+        display: inline-block;
+        width: 8px;
+        height: 1em;
+        background: #a5b4fc;
+        vertical-align: text-bottom;
+        margin-left: 1px;
+        border-radius: 1px;
+        animation: blink 1s step-end infinite;
+      }
+      @keyframes blink {
+        0%, 100% { opacity: 1; }
+        50%       { opacity: 0; }
+      }
+      .typewriter-cursor {
+        display: inline-block;
+        font-weight: 300;
+        color: #4648d4;
+        animation: blink 1s step-end infinite;
+        margin-left: 1px;
+      }
+
+      /* ── Scroll reveal ── */
+      .reveal {
+        opacity: 0;
+        transform: translateY(28px);
+        transition: opacity 0.55s ease, transform 0.55s ease;
+        transition-delay: var(--reveal-delay, 0ms);
+      }
+      .reveal.visible {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    </style>
+  </head>
+  <body class="bg-surface text-slate-900 font-body">
+    <nav class="fixed top-0 w-full z-50 bg-white/80 backdrop-blur-xl">
+      <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
+        <div class="font-headline font-bold text-xl">David Hao</div>
+        <div class="hidden md:flex items-center gap-8 font-label">
+          <a class="text-primary font-bold" href="#experience">Experience</a>
+          <a class="text-slate-600 hover:text-primary" href="#skills">Skills</a>
+          <a class="text-slate-600 hover:text-primary" href="#projects">Projects</a>
+          <a class="text-slate-600 hover:text-primary" href="#education">Education</a>
         </div>
-    </nav>    
-    <nav id="hamburger-nav">
-        <div class="logo">David Hao</div>
-        <div class="hamburger-menu">
-            <div class="hamburger-icon" onclick="toggleMenu()">
-                <span></span>
-                <span></span>
-                <span></span>
-            </div>
-            <div class="menu-links">
-                <li><a href="#about" onclick="toggleMenu()">About</a> </li>
-                <li><a href="#experience" onclick="toggleMenu()">Experience</a></li>
-                <li><a href="#projects" onclick="toggleMenu()">Projects</a></li>
-                <li><a href="#contacts" onclick="toggleMenu()" >Contacts</a></li>
-            </div>
+        <a class="bg-gradient-to-br from-primary to-indigo-500 text-white px-6 py-2 rounded-full font-label text-sm font-bold" href="mailto:david123hao@gmail.com">Contact</a>
+      </div>
     </nav>
-    <section id="profile">
-        <div class="section_pic_container">
-            <img src="./assets/davidhao.jpg" alt="David Hao profile">
-        </div>
-        <div class="section_text">
-            <p class="section_text_p1">Hi, I am</p>
-            <h1 class="title">David Hao</h1>
-            <p class="section_text_p2">Computer Science and Data Science student</p>
-            <div class="btn-container">
-            <div class="btn-container">
-                <button 
-                class="btn btn-color-2" onclick="window.open('./assets/resume.pdf')"
-                >Download CV
-            </button>
-            <button 
-            class="btn btn-color-1" 
-            onclick="location.href='./#contact'">Contact Info
-            </button>
-            </div>
-            <div id="social-container">
-                <img 
-                src="assets/linkedin.png"
-                alt="My LinkedIn Profile"
-                class="icon" 
-                onclick="location.href='https://www.linkedin.com/in/davidhao1'"
-                />
-                <img 
-                src="assets/github.png" 
-                alt="My github Profile" 
-                class="icon"
-                onclick="location.href='https://github.com/david123bob'" />
-            </div>
-            
-        </div>
-    </section>
-    <section id="about">
-        <p class="section_text_p1">Get to know More</p>
-        <p class="title">About Me</p>
-        <div class="section-container">
-            <div class="section_pic_container1">
-                <img src="./assets/school1.png"
-                alt="profile picture"
-                class="about-pic"
-                />
-            </div>
-            <div class="about-details-container">
-                <div class="about-containers">
-                    <div class="details-container">
-                        <img src="./assets/experience.png"
-                         alt="experience icon"
-                         class="icon">
-                    <h3>Experience</h3>
-                    <p> 2+years <br>Computer Science</p>
-                </div>
-                <div class="details-container">
-                    <img src="./assets/education.png"
-                         alt="Education icon"
-                         class="icon">
-                        <h3>Education</h3>
-                        <p> Bachelors Degree in Computer science and Data Science</p>
-                </div>
-            </div>
-            <div class="text-container">
-                <p>Hi, I'm David Hao, currently pursuing a double major in Computer Science and Data Science at NYU, with a minor in Social Entrepreneurship. I love utilizing technology to enhance my everyday life and solve any problems that I might have. 
-As an avid learner, I actively engage in various extracurricular activities, including membership in the Blockchain & Fintech Club, OSIRIS Lab, Quantitative Finance Society, Marketing Society, and Pi Delta Psi.
-I'm eager to apply my skills and explore new technologies in real-world scenarios. If you're seeking a driven individual ready to contribute and grow, let's connect.
-                </p>
-            </div>
-        </div>
-        <img src="./assets/arrow.png" 
-        alt="Arrow icon" 
-        class="icon arrow" 
-        onclick="location.href='./#experience'">
-    </section>
-    <section id="experience">
-        <p class="section_text_p1"> Explore my</p>
-        <h1 class="title"> Experience</h1>
-        <div class="experience-details-container">
-           <div class="detail-container">
-                <h2 class="experience-sub-title">CS Experience</h2>
-                <div class="article-container">
-                    <article>
-                        <img src="./assets/checkmark.png"
-                        alt="Experience icon"
-                        class="icon">
-                        <div>
-                            <h3>HTML</h3>
-                            <p>Intermediate</p>
-                        </div>
-                    </article>
-                    <article>
-                        <img src="./assets/checkmark.png"
-                        alt="Experience icon"
-                        class="icon">
-                        <div>
-                            <h3>Python</h3>
-                            <p>Experienced</p>
-                        </div>
-                    </article>
-                    <article>
-                        <img src="./assets/checkmark.png"
-                        alt="Experience icon"
-                        class="icon">
-                        <div>
-                            <h3>CSS</h3>
-                            <p>Intermediate</p>
-                        </div>
-                    </article>
-                    <article>
-                        <img src="./assets/checkmark.png"
-                        alt="Experience icon"
-                        class="icon">
-                        <div>
-                            <h3>C++</h3>
-                            <p>Experienced</p>
-                        </div>
-                    </article>
-                    <article>
-                        <img src="./assets/checkmark.png"
-                        alt="Experience icon"
-                        class="icon">
-                        <div>
-                            <h3>Javascript</h3>
-                            <p>Experienced</p>
-                        </div>
-                    </article>
-                   <article>
-                        <img src="./assets/checkmark.png"
-                        alt="Experience icon"
-                        class="icon">
-                        <div>
-                            <h3>R</h3>
-                            <p>Intermediate</p>
-                        </div>
-                    </article>
-                   <article>
-                        <img src="./assets/checkmark.png"
-                        alt="Experience icon"
-                        class="icon">
-                        <div>
-                            <h3>CAD</h3>
-                            <p>Intermediate</p>
-                        </div>
-                    </article>
-                </div>
-           </div> 
-        </div>
-        <img src="./assets/arrow.png" 
-        alt="Arrow icon" 
-        class="icon arrow" 
-        onclick="location.href='./#projects'">
-    </section>
-    <section id="projects">
-        <p class="section_text_p1" >Browse My Recent </p>
-        <h1 class="title" >Projects </h1>
-        <div class="experience-details-container">
-            <div class="about-containers">
-                <div class="details-container color-container">
-                    <div class="article-container">
-                        <img src="./assets/project-1.png"
-                         alt="Project 1"
-                         class="project-img">
-                    </div>
-                    <h2 class="experience-sub-title project-title">Automated Texter</h2>
-                    <div class="btn-container">
-                         <button class="btn btn-color-2 project-btn" onclick="location.href='https://github.com'">
-                        Github
-                     </button>
-                     </div>
-                </div>
-                <div class="details-container color-container">
-            <div class="article-container">
-              <img
-                src="./assets/project-2.png"
-                alt="Project 2"
-                class="project-img"
-              />
-            </div>
-            <h2 class="experience-sub-title project-title">Pi Delta Psi Website</h2>
-            <div class="btn-container">
-              <button
-                class="btn btn-color-2 project-btn"
-                onclick="location.href='https://github.com/'"
-              >
-                Github
-              </button>
-            </div>
+
+    <main class="pt-24 space-y-28 mb-24">
+      <section class="max-w-7xl mx-auto px-6 grid grid-cols-1 lg:grid-cols-12 gap-12 items-center" id="hero">
+        <div class="lg:col-span-7 space-y-6">
+          <span class="font-label text-primary font-semibold tracking-wider px-4 py-1 rounded-full bg-indigo-100">AVAILABLE FOR HIRE</span>
+          <h1 class="text-6xl md:text-8xl font-headline font-extrabold tracking-tighter leading-none">Building scalable intelligence.</h1>
+          <p class="text-2xl font-headline text-primary">Software Engineer</p>
+          <p class="text-xl text-onSurfaceVariant max-w-xl">Senior at NYU studying Computer Science and Data Science.</p>
+          <p class="text-xl text-onSurfaceVariant max-w-xl min-h-[1.75rem]">Interested in <span id="typewriter-interest"></span><span class="typewriter-cursor">|</span></p>
+          <div class="flex flex-wrap gap-4 font-label">
+            <a class="bg-gradient-to-br from-primary to-indigo-500 text-white px-8 py-4 rounded-full font-bold" href="./assets/resume.pdf" target="_blank" rel="noreferrer">Resume</a>
+            <a class="px-8 py-4 rounded-full bg-white/70" href="https://github.com/david123bob" target="_blank" rel="noreferrer">GitHub</a>
+            <a class="px-8 py-4 rounded-full bg-white/70" href="https://www.linkedin.com/in/davidhao1" target="_blank" rel="noreferrer">LinkedIn</a>
           </div>
-            </div>
         </div>
-        <img
-        src="./assets/arrow.png"
-        alt="Arrow icon"
-        class="icon arrow"
-        onclick="location.href='./#contact'"
-      />
-    </section>
-    <section id="contact">
-        <p class="section_text_p1">Get in Touch</p>
-        <h1 class="title">Contact Me</h1>
-        <div class="contact-info-upper-container">
-            <div class="contact-info-container">
-            <img src="./assets/email.png"
-            alt="Email icon"
-            class="icon contact-icon"
-            >
-            <p> <a href="mailto:david123hao@gmail.com">david123hao@gmail.com</a></p>
-           </div>
-            <div class="contact-info-container">
-                <img src="./assets/linkedin.png"
-                alt="Linkiedin icon"
-                class="icon contact-icon">
-                <p> <a href="https://www.linkedin.com/in/davidhao1">davidhao1</a></p>
+        <div class="lg:col-span-5 relative">
+          <div class="absolute -inset-1 bg-gradient-to-r from-primary to-secondary rounded-xl blur opacity-30"></div>
+          <div class="relative bg-inverseSurface rounded-xl overflow-hidden shadow-2xl">
+            <div class="px-4 py-3 flex items-center gap-2 bg-white/10">
+              <div class="w-3 h-3 rounded-full bg-red-500"></div>
+              <div class="w-3 h-3 rounded-full bg-amber-500"></div>
+              <div class="w-3 h-3 rounded-full bg-emerald-500"></div>
+              <span class="ml-4 text-xs font-label text-slate-300">~/.profile</span>
             </div>
+            <div class="p-6 font-label text-sm md:text-base space-y-2 text-slate-100" id="terminal-body"></div>
+          </div>
         </div>
-    </section>
-    <footer>
-        <nav>
-            <div class="nav-links-container">
-                <ul class="nav-links">
-                <li><a href="#about">About</a> </li>
-                <li><a href="#experience">Experience</a></li>
-                <li><a href="#projects">Projects</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
+      </section>
+
+      <section class="max-w-7xl mx-auto px-6" id="experience">
+        <div class="mb-12 reveal">
+          <h2 class="text-4xl font-headline font-bold mb-4">Professional Path</h2>
+          <div class="h-1 w-20 bg-primary rounded-full"></div>
+        </div>
+        <div class="space-y-8">
+          <article class="bg-white/80 rounded-2xl p-6 reveal" style="--reveal-delay:0ms">
+            <div class="flex gap-4 items-start">
+              <img src="./assets/experience-placeholder.svg" class="w-12 h-12 rounded-xl" alt="placeholder logo" />
+              <div class="flex-1">
+                <h3 class="text-2xl font-headline font-bold">Socotec</h3>
+                <div class="flex flex-col md:flex-row md:justify-between md:items-center gap-1">
+                  <p class="font-semibold">Full Stack Software Engineer Intern</p>
+                  <span class="font-label text-sm text-onSurfaceVariant">May 2025 - Aug 2025 · New York, NY</span>
+                </div>
+                <ul class="text-onSurfaceVariant mt-3 space-y-2">
+                  <li>• Built speech-to-report workflow for Bluegen Inspect with Whisper AI, Django, React, OpenAI, and React Native.</li>
+                  <li>• Built RAG energy analysis agent using LangChain, LlamaParse, and Pinecone for 18k+ users.</li>
+                  <li>• Improved AWS Lambda report generation speed by 70%.</li>
+                  <li>• Debugged and expanded on a legacy Visual Basic energy modeling tool which processed CSV coordinate data into 3D building geometry, greatly improving efficiency for the energy team.</li>
+                </ul>
+              </div>
             </div>
-        </nav>
-        <p> Copyright &#169; 2023 David Hao. All rights reserved</p>
+          </article>
+          <article class="bg-white/80 rounded-2xl p-6 reveal" style="--reveal-delay:80ms">
+            <div class="flex gap-4 items-start">
+              <img src="./assets/experience-placeholder.svg" class="w-12 h-12 rounded-xl" alt="placeholder logo" />
+              <div class="flex-1">
+                <h3 class="text-2xl font-headline font-bold">Bobst Endpoint Computing Services</h3>
+                <div class="flex flex-col md:flex-row md:justify-between md:items-center gap-1">
+                  <p class="font-semibold">Desktop Support Assistant</p>
+                  <span class="font-label text-sm text-onSurfaceVariant">Sept 2023 - Present · New York, NY</span>
+                </div>
+                <ul class="text-onSurfaceVariant mt-3 space-y-2">
+                  <li>• Resolved 500+ help desk tickets, installed and configured hardware/software, and fulfilled 100+ maintenance requests.</li>
+                  <li>• Maintained and contributed to the development of a student shift portal for tracking and managing work shifts using React.</li>
+                  <li>• Participated in 3 cross-functional projects while managing the setup and relocation of computer equipment.</li>
+                </ul>
+              </div>
+            </div>
+          </article>
+          <article class="bg-white/80 rounded-2xl p-6 reveal" style="--reveal-delay:160ms">
+            <div class="flex gap-4 items-start">
+              <img src="./assets/experience-placeholder.svg" class="w-12 h-12 rounded-xl" alt="placeholder logo" />
+              <div class="flex-1">
+                <h3 class="text-2xl font-headline font-bold">GBCS Group</h3>
+                <div class="flex flex-col md:flex-row md:justify-between md:items-center gap-1">
+                  <p class="font-semibold">Backend Software Engineering Intern</p>
+                  <span class="font-label text-sm text-onSurfaceVariant">Jan 2025 - May 2025 · New York, NY</span>
+                </div>
+                <ul class="text-onSurfaceVariant mt-3 space-y-2">
+                  <li>• Worked on the backend of a consultant reporting and planning platform.</li>
+                  <li>• Created JavaScript nodes, designed and tested PostgreSQL queries, optimizing SQL database performance, and ensuring reliable data flow between services.</li>
+                </ul>
+              </div>
+            </div>
+          </article>
+          <article class="bg-white/80 rounded-2xl p-6 reveal" style="--reveal-delay:240ms">
+            <div class="flex gap-4 items-start">
+              <img src="./assets/experience-placeholder.svg" class="w-12 h-12 rounded-xl" alt="placeholder logo" />
+              <div class="flex-1">
+                <h3 class="text-2xl font-headline font-bold">ARobotics</h3>
+                <div class="flex flex-col md:flex-row md:justify-between md:items-center gap-1">
+                  <p class="font-semibold">Software Engineer Intern</p>
+                  <span class="font-label text-sm text-onSurfaceVariant">Jan 2021 - Aug 2023 · Ossining, NY</span>
+                </div>
+                <ul class="text-onSurfaceVariant mt-3 space-y-2">
+                  <li>• Utilized Django for the backend, image processing with OpenCV, and motor control with Arduino IDE.</li>
+                  <li>• Contributed to the development of multiple robots, including a thermal imaging robot for infrastructure leak detection, an autonomous window-washing robot, and a pavement inspection robot.</li>
+                </ul>
+              </div>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section class="max-w-7xl mx-auto px-6" id="projects">
+        <div class="reveal">
+          <h2 class="text-4xl font-headline font-bold mb-4">Featured Projects</h2>
+          <p class="text-onSurfaceVariant mb-6">A showcase of systems and products I have built recently.</p>
+        </div>
+
+        <!-- Carousel wrapper -->
+        <div class="relative reveal">
+          <!-- Prev arrow -->
+          <button id="proj-prev" aria-label="Previous project" class="absolute left-0 top-1/2 -translate-y-1/2 -translate-x-5 z-10 w-10 h-10 flex items-center justify-center bg-white rounded-full shadow-md border border-slate-100 text-slate-500 hover:text-primary hover:border-primary transition-colors disabled:opacity-30 disabled:cursor-not-allowed">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 18 9 12 15 6"/></svg>
+          </button>
+          <!-- Next arrow -->
+          <button id="proj-next" aria-label="Next project" class="absolute right-0 top-1/2 -translate-y-1/2 translate-x-5 z-10 w-10 h-10 flex items-center justify-center bg-white rounded-full shadow-md border border-slate-100 text-slate-500 hover:text-primary hover:border-primary transition-colors disabled:opacity-30 disabled:cursor-not-allowed">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"/></svg>
+          </button>
+
+          <!-- Track -->
+          <div class="overflow-hidden rounded-2xl">
+            <div id="proj-inner" class="flex transition-transform duration-500 ease-in-out">
+
+        <!-- cards go here, each is w-full shrink-0 -->
+        <div class="w-full shrink-0 grid grid-cols-1 md:grid-cols-2 gap-6">
+
+          <!-- SLIDE 1: ApplyFlow + Propel Earth -->
+          <article class="bg-white/90 rounded-2xl overflow-hidden shadow-sm flex flex-col">
+            <div class="w-full h-56 bg-indigo-50 flex items-center justify-center p-3">
+              <img src="./assets/project-1.png" alt="ApplyFlow.us screenshot" class="w-full h-full object-contain" />
+            </div>
+            <div class="p-6 space-y-3 flex-1">
+              <div class="flex items-start justify-between gap-3">
+                <div>
+                  <h3 class="text-xl font-headline font-bold text-slate-900">ApplyFlow.us</h3>
+                  <p class="font-label text-sm text-onSurfaceVariant">Feb 2026 – Present</p>
+                </div>
+                <div class="flex items-center gap-3 mt-1 shrink-0">
+                  <a href="https://applyflow.us" target="_blank" rel="noreferrer" title="Live site" class="text-slate-400 hover:text-primary transition-colors">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+                  </a>
+                </div>
+              </div>
+              <div class="flex flex-wrap gap-2 font-label text-xs">
+                <span class="px-2 py-1 bg-indigo-50 text-primary rounded-md">React</span>
+                <span class="px-2 py-1 bg-indigo-50 text-primary rounded-md">Node.js</span>
+                <span class="px-2 py-1 bg-indigo-50 text-primary rounded-md">FastAPI</span>
+                <span class="px-2 py-1 bg-indigo-50 text-primary rounded-md">Supabase</span>
+              </div>
+              <p class="text-xs font-label font-semibold text-onSurfaceVariant uppercase tracking-wide">Lead Developer</p>
+              <ul class="text-onSurfaceVariant text-sm space-y-2">
+                <li>• Individually created a full-stack website hosted using EC2, S3, CloudFront, Cloudflare, and Supabase, optimizing the recruiting process by producing an optimized job list for the user.</li>
+                <li>• Utilized Kubernetes to create a scalable pipeline of containerized scrapers and auto-applying services across EC2 and Supabase.</li>
+              </ul>
+            </div>
+          </article>
+
+          <article class="bg-white/90 rounded-2xl overflow-hidden shadow-sm flex flex-col">
+            <div class="w-full h-56 bg-emerald-50 flex items-center justify-center p-3">
+              <img src="./assets/project-2.png" alt="Propel Earth screenshot" class="w-full h-full object-contain" />
+            </div>
+            <div class="p-6 space-y-3 flex-1">
+              <div class="flex items-start justify-between gap-3">
+                <div>
+                  <h3 class="text-xl font-headline font-bold text-slate-900">Propel Earth</h3>
+                  <p class="font-label text-sm text-onSurfaceVariant">Oct 2025 – Present</p>
+                </div>
+                <div class="flex items-center gap-3 mt-1 shrink-0">
+                  <a href="https://propel.earth/" target="_blank" rel="noreferrer" title="Live site" class="text-slate-400 hover:text-primary transition-colors">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+                  </a>
+                </div>
+              </div>
+              <div class="flex flex-wrap gap-2 font-label text-xs">
+                <span class="px-2 py-1 bg-emerald-50 text-emerald-700 rounded-md">React</span>
+                <span class="px-2 py-1 bg-emerald-50 text-emerald-700 rounded-md">FastAPI</span>
+                <span class="px-2 py-1 bg-emerald-50 text-emerald-700 rounded-md">Firebase</span>
+              </div>
+              <p class="text-xs font-label font-semibold text-onSurfaceVariant uppercase tracking-wide">Fullstack Developer</p>
+              <ul class="text-onSurfaceVariant text-sm space-y-2">
+                <li>• Built and shipped core features for Propel Earth, a marketplace platform connecting startup founders with service providers, implementing user profiles, service listings, and search/discovery functionality.</li>
+                <li>• Worked in a small engineering team to design and develop full-stack web applications across frontend UI components and backend APIs that power marketplace interactions.</li>
+              </ul>
+            </div>
+          </article>
+
+        </div><!-- end slide 1 -->
+
+        <!-- SLIDE 2: Weather ML + Secure Messaging -->
+        <div class="w-full shrink-0 grid grid-cols-1 md:grid-cols-2 gap-6">
+
+          <article class="bg-white/90 rounded-2xl overflow-hidden shadow-sm flex flex-col">
+            <div class="w-full h-56 bg-sky-50 flex items-center justify-center p-3">
+              <img src="./assets/project-3.png" alt="Weather ML screenshot" class="w-full h-full object-contain" />
+            </div>
+            <div class="p-6 space-y-3 flex-1">
+              <div class="flex items-start justify-between gap-3">
+                <div>
+                  <h3 class="text-xl font-headline font-bold text-slate-900">Weather ML Prediction</h3>
+                  <p class="font-label text-sm text-onSurfaceVariant">2025</p>
+                </div>
+                <div class="flex items-center gap-3 mt-1 shrink-0">
+                  <a href="https://github.com/YardenMorad2003/weather-ml/blob/main/app.py" target="_blank" rel="noreferrer" title="GitHub" class="text-slate-400 hover:text-slate-900 transition-colors">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.477 2 2 6.477 2 12c0 4.418 2.865 8.167 6.839 9.49.5.09.682-.217.682-.482 0-.237-.009-.868-.013-1.703-2.782.604-3.369-1.342-3.369-1.342-.454-1.154-1.11-1.461-1.11-1.461-.908-.62.069-.608.069-.608 1.003.07 1.531 1.031 1.531 1.031.892 1.53 2.341 1.088 2.91.832.091-.647.35-1.088.636-1.338-2.22-.253-4.555-1.11-4.555-4.943 0-1.091.39-1.984 1.029-2.683-.103-.253-.446-1.27.098-2.647 0 0 .84-.269 2.75 1.026A9.564 9.564 0 0 1 12 6.844a9.59 9.59 0 0 1 2.504.337c1.909-1.295 2.747-1.026 2.747-1.026.546 1.377.202 2.394.1 2.647.64.699 1.028 1.592 1.028 2.683 0 3.842-2.339 4.687-4.566 4.935.359.309.678.919.678 1.852 0 1.336-.012 2.415-.012 2.743 0 .267.18.576.688.479C19.138 20.163 22 16.418 22 12c0-5.523-4.477-10-10-10z"/></svg>
+                  </a>
+                </div>
+              </div>
+              <div class="flex flex-wrap gap-2 font-label text-xs">
+                <span class="px-2 py-1 bg-sky-50 text-sky-700 rounded-md">Python</span>
+                <span class="px-2 py-1 bg-sky-50 text-sky-700 rounded-md">PyTorch</span>
+                <span class="px-2 py-1 bg-sky-50 text-sky-700 rounded-md">Streamlit</span>
+                <span class="px-2 py-1 bg-sky-50 text-sky-700 rounded-md">Open-Meteo API</span>
+              </div>
+              <p class="text-xs font-label font-semibold text-onSurfaceVariant uppercase tracking-wide">ML Engineer</p>
+              <ul class="text-onSurfaceVariant text-sm space-y-2">
+                <li>• Trained an LSTM model on real-time Open-Meteo data to forecast short-horizon temperature trends.</li>
+                <li>• Added configurable training controls and forecast visualization workflows.</li>
+              </ul>
+            </div>
+          </article>
+
+          <article class="bg-white/90 rounded-2xl overflow-hidden shadow-sm flex flex-col">
+            <div class="w-full h-56 bg-slate-100 flex items-center justify-center p-3">
+              <img src="./assets/project-11.png" alt="Secure Messaging screenshot" class="w-full h-full object-contain" />
+            </div>
+            <div class="p-6 space-y-3 flex-1">
+              <div class="flex items-start justify-between gap-3">
+                <div>
+                  <h3 class="text-xl font-headline font-bold text-slate-900">Secure Messaging</h3>
+                  <p class="font-label text-sm text-onSurfaceVariant">Mar 2025 – Apr 2025</p>
+                </div>
+                <div class="flex items-center gap-3 mt-1 shrink-0">
+                  <a href="https://github.com/david123bob/cybersecurity" target="_blank" rel="noreferrer" title="GitHub" class="text-slate-400 hover:text-slate-900 transition-colors">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.477 2 2 6.477 2 12c0 4.418 2.865 8.167 6.839 9.49.5.09.682-.217.682-.482 0-.237-.009-.868-.013-1.703-2.782.604-3.369-1.342-3.369-1.342-.454-1.154-1.11-1.461-1.11-1.461-.908-.62.069-.608.069-.608 1.003.07 1.531 1.031 1.531 1.031.892 1.53 2.341 1.088 2.91.832.091-.647.35-1.088.636-1.338-2.22-.253-4.555-1.11-4.555-4.943 0-1.091.39-1.984 1.029-2.683-.103-.253-.446-1.27.098-2.647 0 0 .84-.269 2.75 1.026A9.564 9.564 0 0 1 12 6.844a9.59 9.59 0 0 1 2.504.337c1.909-1.295 2.747-1.026 2.747-1.026.546 1.377.202 2.394.1 2.647.64.699 1.028 1.592 1.028 2.683 0 3.842-2.339 4.687-4.566 4.935.359.309.678.919.678 1.852 0 1.336-.012 2.415-.012 2.743 0 .267.18.576.688.479C19.138 20.163 22 16.418 22 12c0-5.523-4.477-10-10-10z"/></svg>
+                  </a>
+                </div>
+              </div>
+              <div class="flex flex-wrap gap-2 font-label text-xs">
+                <span class="px-2 py-1 bg-slate-100 text-slate-700 rounded-md">Go</span>
+                <span class="px-2 py-1 bg-slate-100 text-slate-700 rounded-md">Chatterbox</span>
+                <span class="px-2 py-1 bg-slate-100 text-slate-700 rounded-md">Cryptography</span>
+              </div>
+              <p class="text-xs font-label font-semibold text-onSurfaceVariant uppercase tracking-wide">Designer</p>
+              <ul class="text-onSurfaceVariant text-sm space-y-2">
+                <li>• Implemented Signal-style secure messaging using Triple DH handshake and double ratchet with NIST P-256 / AES-GCM.</li>
+                <li>• Achieved forward secrecy, deniable authentication, and resilience to out-of-order messages.</li>
+              </ul>
+            </div>
+          </article>
+
+        </div><!-- end slide 2 -->
+
+        <!-- SLIDE 3: Tech Treks + Automated Texter -->
+        <div class="w-full shrink-0 grid grid-cols-1 md:grid-cols-2 gap-6">
+
+          <article class="bg-white/90 rounded-2xl overflow-hidden shadow-sm flex flex-col">
+            <div class="w-full h-56 bg-gradient-to-br from-violet-50 to-purple-100 flex items-center justify-center">
+              <span class="text-6xl font-headline font-bold text-purple-200">TT</span>
+            </div>
+            <div class="p-6 space-y-3 flex-1">
+              <div class="flex items-start justify-between gap-3">
+                <div>
+                  <h3 class="text-xl font-headline font-bold text-slate-900">Tech Treks</h3>
+                  <p class="font-label text-sm text-onSurfaceVariant">2025</p>
+                </div>
+                <div class="flex items-center gap-3 mt-1 shrink-0">
+                  <a href="https://github.com/david123bob/techtrecks" target="_blank" rel="noreferrer" title="GitHub" class="text-slate-400 hover:text-slate-900 transition-colors">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.477 2 2 6.477 2 12c0 4.418 2.865 8.167 6.839 9.49.5.09.682-.217.682-.482 0-.237-.009-.868-.013-1.703-2.782.604-3.369-1.342-3.369-1.342-.454-1.154-1.11-1.461-1.11-1.461-.908-.62.069-.608.069-.608 1.003.07 1.531 1.031 1.531 1.031.892 1.53 2.341 1.088 2.91.832.091-.647.35-1.088.636-1.338-2.22-.253-4.555-1.11-4.555-4.943 0-1.091.39-1.984 1.029-2.683-.103-.253-.446-1.27.098-2.647 0 0 .84-.269 2.75 1.026A9.564 9.564 0 0 1 12 6.844a9.59 9.59 0 0 1 2.504.337c1.909-1.295 2.747-1.026 2.747-1.026.546 1.377.202 2.394.1 2.647.64.699 1.028 1.592 1.028 2.683 0 3.842-2.339 4.687-4.566 4.935.359.309.678.919.678 1.852 0 1.336-.012 2.415-.012 2.743 0 .267.18.576.688.479C19.138 20.163 22 16.418 22 12c0-5.523-4.477-10-10-10z"/></svg>
+                  </a>
+                </div>
+              </div>
+              <div class="flex flex-wrap gap-2 font-label text-xs">
+                <span class="px-2 py-1 bg-violet-50 text-violet-700 rounded-md">React</span>
+                <span class="px-2 py-1 bg-violet-50 text-violet-700 rounded-md">Node.js</span>
+                <span class="px-2 py-1 bg-violet-50 text-violet-700 rounded-md">OpenAI</span>
+              </div>
+              <p class="text-xs font-label font-semibold text-onSurfaceVariant uppercase tracking-wide">Project Lead / Mentor</p>
+              <ul class="text-onSurfaceVariant text-sm space-y-2">
+                <li>• Led a team of 3 to build a Chrome extension tracking online food ingredients with AI-powered suggestions.</li>
+                <li>• Mentored students through Agile planning, debugging, and professional development.</li>
+              </ul>
+            </div>
+          </article>
+
+          <article class="bg-white/90 rounded-2xl overflow-hidden shadow-sm flex flex-col">
+            <div class="w-full h-56 bg-gradient-to-br from-amber-50 to-orange-100 flex items-center justify-center">
+              <span class="text-6xl font-headline font-bold text-orange-200">AT</span>
+            </div>
+            <div class="p-6 space-y-3 flex-1">
+              <div class="flex items-start justify-between gap-3">
+                <div>
+                  <h3 class="text-xl font-headline font-bold text-slate-900">Automated Texter</h3>
+                  <p class="font-label text-sm text-onSurfaceVariant">Sept – Oct 2022</p>
+                </div>
+              </div>
+              <div class="flex flex-wrap gap-2 font-label text-xs">
+                <span class="px-2 py-1 bg-amber-50 text-amber-700 rounded-md">JavaScript</span>
+                <span class="px-2 py-1 bg-amber-50 text-amber-700 rounded-md">APIs</span>
+              </div>
+              <p class="text-xs font-label font-semibold text-onSurfaceVariant uppercase tracking-wide">Personal Project</p>
+              <ul class="text-onSurfaceVariant text-sm space-y-2">
+                <li>• Built an automated texting workflow and iterated on reliability and message handling.</li>
+              </ul>
+            </div>
+          </article>
+
+        </div><!-- end slide 3 -->
+
+        <!-- SLIDE 4: Pi Delta Psi -->
+        <div class="w-full shrink-0 grid grid-cols-1 md:grid-cols-2 gap-6">
+
+          <article class="bg-white/90 rounded-2xl overflow-hidden shadow-sm flex flex-col">
+            <div class="w-full h-56 bg-gradient-to-br from-red-50 to-rose-100 flex items-center justify-center">
+              <span class="text-6xl font-headline font-bold text-rose-200">ΠΔΨ</span>
+            </div>
+            <div class="p-6 space-y-3 flex-1">
+              <div class="flex items-start justify-between gap-3">
+                <div>
+                  <h3 class="text-xl font-headline font-bold text-slate-900">Pi Delta Psi — NYU Chapter</h3>
+                  <p class="font-label text-sm text-onSurfaceVariant">Nov 2022 – Dec 2022</p>
+                </div>
+                <div class="flex items-center gap-3 mt-1 shrink-0">
+                  <a href="https://nyupdpsi.org/" target="_blank" rel="noreferrer" title="Live site" class="text-slate-400 hover:text-primary transition-colors">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+                  </a>
+                </div>
+              </div>
+              <div class="flex flex-wrap gap-2 font-label text-xs">
+                <span class="px-2 py-1 bg-rose-50 text-rose-700 rounded-md">WordPress</span>
+                <span class="px-2 py-1 bg-rose-50 text-rose-700 rounded-md">HTML</span>
+                <span class="px-2 py-1 bg-rose-50 text-rose-700 rounded-md">CSS</span>
+              </div>
+              <p class="text-xs font-label font-semibold text-onSurfaceVariant uppercase tracking-wide">Web Developer</p>
+              <ul class="text-onSurfaceVariant text-sm space-y-2">
+                <li>• Built the official NYU Pi Delta Psi chapter website on WordPress, giving the fraternity an online presence to promote events, membership, and community.</li>
+                <li>• Designed responsive layouts and content pages to help prospective members learn about the organization and get involved.</li>
+              </ul>
+            </div>
+          </article>
+
+        </div><!-- end slide 4 -->
+
+            </div><!-- end proj-inner -->
+          </div><!-- end overflow-hidden track -->
+
+          <!-- Dot indicators -->
+          <div class="flex justify-center gap-2 mt-5" id="proj-dots">
+            <button class="w-2.5 h-2.5 rounded-full bg-primary transition-all" data-slide="0" aria-label="Slide 1"></button>
+            <button class="w-2.5 h-2.5 rounded-full bg-slate-300 transition-all" data-slide="1" aria-label="Slide 2"></button>
+            <button class="w-2.5 h-2.5 rounded-full bg-slate-300 transition-all" data-slide="2" aria-label="Slide 3"></button>
+            <button class="w-2.5 h-2.5 rounded-full bg-slate-300 transition-all" data-slide="3" aria-label="Slide 4"></button>
+          </div>
+
+        </div><!-- end relative carousel wrapper -->
+      </section>
+
+      <section class="max-w-7xl mx-auto px-6" id="skills">
+        <h2 class="text-4xl font-headline font-bold mb-8 reveal">Technical Proficiency</h2>
+        <div class="flex flex-wrap gap-3 font-label">
+          <span class="px-4 py-2 bg-white rounded-lg reveal" style="--reveal-delay:0ms">Python</span>
+          <span class="px-4 py-2 bg-white rounded-lg reveal" style="--reveal-delay:50ms">TypeScript</span>
+          <span class="px-4 py-2 bg-white rounded-lg reveal" style="--reveal-delay:100ms">Go</span>
+          <span class="px-4 py-2 bg-white rounded-lg reveal" style="--reveal-delay:150ms">React</span>
+          <span class="px-4 py-2 bg-white rounded-lg reveal" style="--reveal-delay:200ms">Node.js</span>
+          <span class="px-4 py-2 bg-white rounded-lg reveal" style="--reveal-delay:250ms">FastAPI</span>
+          <span class="px-4 py-2 bg-white rounded-lg reveal" style="--reveal-delay:300ms">AWS</span>
+          <span class="px-4 py-2 bg-white rounded-lg reveal" style="--reveal-delay:350ms">Docker</span>
+        </div>
+      </section>
+
+      <section class="max-w-7xl mx-auto px-6" id="education">
+        <h2 class="text-4xl font-headline font-bold mb-6 reveal">Education</h2>
+        <div class="bg-white rounded-2xl p-8 reveal" style="--reveal-delay:100ms">
+          <h3 class="text-2xl font-headline font-bold">New York University</h3>
+          <p class="text-primary font-semibold">B.A. in Computer Science and Data Science, minors in Math and Economics</p>
+          <p class="font-label text-sm text-onSurfaceVariant mt-1">Expected May 2026 · GPA 3.9 · New York, NY</p>
+        </div>
+      </section>
+    </main>
+
+    <footer class="w-full bg-slate-50">
+      <div class="max-w-7xl mx-auto px-8 py-12 flex flex-col md:flex-row justify-between items-center gap-6">
+        <div class="text-center md:text-left">
+          <span class="text-lg font-bold font-headline">David Hao</span>
+          <p class="text-slate-500 text-sm">© 2026 David Hao.</p>
+        </div>
+        <div class="flex gap-8 font-label">
+          <a class="hover:text-primary" href="https://github.com/david123bob" target="_blank" rel="noreferrer">GitHub</a>
+          <a class="hover:text-primary" href="https://www.linkedin.com/in/davidhao1" target="_blank" rel="noreferrer">LinkedIn</a>
+          <a class="hover:text-primary" href="mailto:david123hao@gmail.com">Email</a>
+        </div>
+      </div>
     </footer>
-        <script src="script.js"></script>
-    </body>
+    <script src="script.js"></script>
+  </body>
 </html>
