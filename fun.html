@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Fun — David Hao</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Inter:wght@300;400;500;600&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet" />
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              primary: "#4648d4",
+              secondary: "#6b38d4",
+              surface: "#fbf8fc",
+              onSurfaceVariant: "#464554",
+              inverseSurface: "#303033",
+              outlineVariant: "#c7c4d7"
+            },
+            fontFamily: {
+              headline: ["Plus Jakarta Sans"],
+              body: ["Inter"],
+              label: ["Space Grotesk"]
+            }
+          }
+        }
+      };
+    </script>
+    <link rel="stylesheet" href="snake.css" />
+  </head>
+  <body class="bg-surface text-slate-900 font-body min-h-screen flex flex-col">
+
+    <!-- Nav -->
+    <nav class="fixed top-0 w-full z-50 bg-white/80 backdrop-blur-xl border-b border-slate-100">
+      <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
+        <div class="font-headline font-bold text-xl">David Hao</div>
+        <div class="hidden md:flex items-center gap-3 font-label">
+          <a class="px-5 py-2 rounded-full border border-slate-300 text-slate-600 font-semibold hover:border-primary hover:text-primary transition-colors" href="index.html">Home</a>
+          <a class="px-5 py-2 rounded-full border border-primary text-primary font-semibold hover:bg-primary hover:text-white transition-colors" href="fun.html">Fun</a>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Main -->
+    <main class="flex-1 pt-24 pb-16 px-4">
+      <div class="max-w-2xl mx-auto">
+
+        <!-- Header -->
+        <div class="text-center mb-6">
+          <h1 class="text-4xl md:text-5xl font-headline font-extrabold tracking-tighter mb-2">Snake</h1>
+          <p class="text-onSurfaceVariant font-label text-sm">Eat the food. Don't hit the walls or yourself.</p>
+        </div>
+
+        <!-- Score bar -->
+        <div class="flex justify-between items-center mb-3 px-1 font-label text-sm font-semibold text-onSurfaceVariant">
+          <span>Score: <span id="score-display">0</span></span>
+          <span>Best: <span id="best-display">0</span></span>
+          <button id="restart-btn" class="px-4 py-1.5 rounded-full bg-primary text-white text-xs font-bold hover:opacity-90 transition-opacity">New Game</button>
+        </div>
+
+        <!-- Canvas -->
+        <canvas id="game-canvas"></canvas>
+
+        <!-- Controls -->
+        <div class="flex flex-wrap justify-center gap-5 mt-5 font-label text-xs text-onSurfaceVariant">
+          <div class="flex items-center gap-1">
+            <kbd>↑</kbd><kbd>↓</kbd><kbd>←</kbd><kbd>→</kbd>
+            <span class="ml-1">or</span>
+            <kbd>W</kbd><kbd>S</kbd><kbd>A</kbd><kbd>D</kbd>
+            <span class="ml-1">to move</span>
+          </div>
+          <div class="flex items-center gap-1"><kbd>R</kbd> <span>restart</span></div>
+          <div class="flex items-center gap-1"><kbd>P</kbd> <span>pause</span></div>
+        </div>
+
+      </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="border-t border-slate-100 py-5">
+      <div class="max-w-7xl mx-auto px-6 flex justify-between items-center text-sm text-slate-400 font-label">
+        <span>© <span id="year"></span> David Hao</span>
+        <a href="index.html" class="hover:text-primary transition-colors">← Back to Home</a>
+      </div>
+    </footer>
+
+    <script src="snake.js"></script>
+    <script>
+      document.getElementById("year").textContent = new Date().getFullYear();
+    </script>
+  </body>
+</html>

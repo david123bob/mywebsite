@@ -67,21 +67,18 @@
     <nav class="fixed top-0 w-full z-50 bg-white/80 backdrop-blur-xl">
       <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
         <div class="font-headline font-bold text-xl">David Hao</div>
-        <div class="hidden md:flex items-center gap-8 font-label">
-          <a class="text-primary font-bold" href="#experience">Experience</a>
-          <a class="text-slate-600 hover:text-primary" href="#skills">Skills</a>
-          <a class="text-slate-600 hover:text-primary" href="#projects">Projects</a>
-          <a class="text-slate-600 hover:text-primary" href="#education">Education</a>
+        <div class="hidden md:flex items-center gap-3 font-label">
+          <a class="px-5 py-2 rounded-full border border-primary text-primary font-semibold hover:bg-primary hover:text-white transition-colors" href="index.html">Home</a>
+          <a class="px-5 py-2 rounded-full border border-slate-300 text-slate-600 font-semibold hover:border-primary hover:text-primary transition-colors" href="fun.html">Fun</a>
         </div>
-        <a class="bg-gradient-to-br from-primary to-indigo-500 text-white px-6 py-2 rounded-full font-label text-sm font-bold" href="mailto:david123hao@gmail.com">Contact</a>
       </div>
     </nav>
 
     <main class="pt-24 space-y-28 mb-24">
-      <section class="max-w-7xl mx-auto px-6 grid grid-cols-1 lg:grid-cols-12 gap-12 items-center" id="hero">
+      <section class="max-w-5xl mx-auto px-10 grid grid-cols-1 lg:grid-cols-12 gap-12 items-center" id="hero">
         <div class="lg:col-span-7 space-y-6">
           <span class="font-label text-primary font-semibold tracking-wider px-4 py-1 rounded-full bg-indigo-100">AVAILABLE FOR HIRE</span>
-          <h1 class="text-6xl md:text-8xl font-headline font-extrabold tracking-tighter leading-none">Building scalable intelligence.</h1>
+          <h1 class="text-6xl md:text-8xl font-headline font-extrabold tracking-tighter leading-none">David Hao.</h1>
           <p class="text-2xl font-headline text-primary">Software Engineer</p>
           <p class="text-xl text-onSurfaceVariant max-w-xl">Senior at NYU studying Computer Science and Data Science.</p>
           <p class="text-xl text-onSurfaceVariant max-w-xl min-h-[1.75rem]">Interested in <span id="typewriter-interest"></span><span class="typewriter-cursor">|</span></p>
@@ -105,12 +102,13 @@
         </div>
       </section>
 
-      <section class="max-w-7xl mx-auto px-6" id="experience">
+      <section class="max-w-5xl mx-auto px-10" id="experience">
         <div class="mb-12 reveal">
           <h2 class="text-4xl font-headline font-bold mb-4">Professional Path</h2>
           <div class="h-1 w-20 bg-primary rounded-full"></div>
         </div>
         <div class="space-y-8">
+          <!-- 1. Socotec -->
           <article class="bg-white/80 rounded-2xl p-6 reveal" style="--reveal-delay:0ms">
             <div class="flex gap-4 items-start">
               <img src="./assets/socotec.png" class="w-12 h-12 rounded-xl object-contain bg-white p-1" alt="Socotec logo" />
@@ -119,6 +117,21 @@
                 <div class="flex flex-col md:flex-row md:justify-between md:items-center gap-1">
                   <p class="font-semibold">Full Stack Software Engineer Intern</p>
                   <span class="font-label text-sm text-onSurfaceVariant">May 2025 - Aug 2025 · New York, NY</span>
+                </div>
+                <div class="flex flex-wrap gap-2 mt-3">
+                  <span class="px-3 py-1 rounded-full text-xs font-semibold bg-indigo-100 text-indigo-700">AWS Bedrock</span>
+                  <span class="px-3 py-1 rounded-full text-xs font-semibold bg-indigo-100 text-indigo-700">AWS Lambda</span>
+                  <span class="px-3 py-1 rounded-full text-xs font-semibold bg-indigo-100 text-indigo-700">RAG</span>
+                  <span class="px-3 py-1 rounded-full text-xs font-semibold bg-indigo-100 text-indigo-700">Whisper AI</span>
+                  <span class="px-3 py-1 rounded-full text-xs font-semibold bg-indigo-100 text-indigo-700">Django</span>
+                  <span class="px-3 py-1 rounded-full text-xs font-semibold bg-indigo-100 text-indigo-700">React</span>
+                  <span class="px-3 py-1 rounded-full text-xs font-semibold bg-indigo-100 text-indigo-700">OpenAI</span>
+                  <span class="px-3 py-1 rounded-full text-xs font-semibold bg-indigo-100 text-indigo-700">React Native</span>
+                  <span class="px-3 py-1 rounded-full text-xs font-semibold bg-indigo-100 text-indigo-700">LangChain</span>
+                  <span class="px-3 py-1 rounded-full text-xs font-semibold bg-indigo-100 text-indigo-700">LlamaParse</span>
+                  <span class="px-3 py-1 rounded-full text-xs font-semibold bg-indigo-100 text-indigo-700">Pinecone</span>
+                  <span class="px-3 py-1 rounded-full text-xs font-semibold bg-indigo-100 text-indigo-700">Visual Basic</span>
+                  <span class="px-3 py-1 rounded-full text-xs font-semibold bg-indigo-100 text-indigo-700">Bash</span>
                 </div>
                 <ul class="text-onSurfaceVariant mt-3 space-y-2">
                   <li>• Built speech-to-report workflow for Bluegen Inspect with Whisper AI, Django, React, OpenAI, and React Native.</li>
@@ -129,7 +142,36 @@
               </div>
             </div>
           </article>
+          <!-- 2. High Speed Research Network -->
           <article class="bg-white/80 rounded-2xl p-6 reveal" style="--reveal-delay:80ms">
+            <div class="flex gap-4 items-start">
+              <img src="./assets/nyu.png" class="w-12 h-12 rounded-xl object-contain bg-white p-1" alt="NYU HSRN logo" />
+              <div class="flex-1">
+                <h3 class="text-2xl font-headline font-bold">High Speed Research Network</h3>
+                <div class="flex flex-col md:flex-row md:justify-between md:items-center gap-1">
+                  <p class="font-semibold">Researcher</p>
+                  <span class="font-label text-sm text-onSurfaceVariant">Jan 2025 - Present · New York, NY</span>
+                </div>
+                <div class="flex flex-wrap gap-2 mt-3">
+                  <span class="px-3 py-1 rounded-full text-xs font-semibold bg-indigo-100 text-indigo-700">Corelink</span>
+                  <span class="px-3 py-1 rounded-full text-xs font-semibold bg-indigo-100 text-indigo-700">Docker</span>
+                  <span class="px-3 py-1 rounded-full text-xs font-semibold bg-indigo-100 text-indigo-700">Kubernetes</span>
+                  <span class="px-3 py-1 rounded-full text-xs font-semibold bg-indigo-100 text-indigo-700">Raspberry Pi</span>
+                  <span class="px-3 py-1 rounded-full text-xs font-semibold bg-indigo-100 text-indigo-700">Bash</span>
+                  <span class="px-3 py-1 rounded-full text-xs font-semibold bg-indigo-100 text-indigo-700">C++</span>
+                  <span class="px-3 py-1 rounded-full text-xs font-semibold bg-indigo-100 text-indigo-700">ROS</span>
+                  <span class="px-3 py-1 rounded-full text-xs font-semibold bg-indigo-100 text-indigo-700">React</span>
+                </div>
+                <ul class="text-onSurfaceVariant mt-3 space-y-2">
+                  <li>• Collaborating with Prof. Al Olsen and NYU CREATE Lab to build a real-time biometric data pipeline using Biopac sensors, Corelink, and NYU's HPC cluster, integrating ML models for adaptive learning environments that respond to student engagement.</li>
+                  <li>• Collaborated with Prof. Robert Pahle to develop a real-time calcium-imaging pipeline on an HPC Kubernetes cluster using Docker, Corelink, and FIOLA, enabling sub-30 ms closed-loop neural analysis. Utilized Python, FIOLA, CaImAn, Raspberry Pi, and Bash.</li>
+                  <li>• Built a ROS C++ node on a Raspberry Pi to stream thermal data from a thermal camera over Corelink, using React for real-time remote robot control via the High-Speed Research Network (HSRN).</li>
+                </ul>
+              </div>
+            </div>
+          </article>
+          <!-- 3. Bobst Endpoint Computing Services -->
+          <article class="bg-white/80 rounded-2xl p-6 reveal" style="--reveal-delay:160ms">
             <div class="flex gap-4 items-start">
               <img src="./assets/nyu.png" class="w-12 h-12 rounded-xl object-contain bg-white p-1" alt="NYU logo" />
               <div class="flex-1">
@@ -137,6 +179,12 @@
                 <div class="flex flex-col md:flex-row md:justify-between md:items-center gap-1">
                   <p class="font-semibold">Desktop Support Assistant</p>
                   <span class="font-label text-sm text-onSurfaceVariant">Sept 2023 - Present · New York, NY</span>
+                </div>
+                <div class="flex flex-wrap gap-2 mt-3">
+                  <span class="px-3 py-1 rounded-full text-xs font-semibold bg-indigo-100 text-indigo-700">IT</span>
+                  <span class="px-3 py-1 rounded-full text-xs font-semibold bg-indigo-100 text-indigo-700">React</span>
+                  <span class="px-3 py-1 rounded-full text-xs font-semibold bg-indigo-100 text-indigo-700">Customer Service</span>
+                  <span class="px-3 py-1 rounded-full text-xs font-semibold bg-indigo-100 text-indigo-700">Bash</span>
                 </div>
                 <ul class="text-onSurfaceVariant mt-3 space-y-2">
                   <li>• Resolved 500+ help desk tickets, installed and configured hardware/software, and fulfilled 100+ maintenance requests.</li>
@@ -146,7 +194,8 @@
               </div>
             </div>
           </article>
-          <article class="bg-white/80 rounded-2xl p-6 reveal" style="--reveal-delay:160ms">
+          <!-- 4. GBCS Group -->
+          <article class="bg-white/80 rounded-2xl p-6 reveal" style="--reveal-delay:240ms">
             <div class="flex gap-4 items-start">
               <img src="./assets/gbcs.jpeg" class="w-12 h-12 rounded-xl object-contain bg-white p-1" alt="GBCS Group logo" />
               <div class="flex-1">
@@ -155,6 +204,12 @@
                   <p class="font-semibold">Backend Software Engineering Intern</p>
                   <span class="font-label text-sm text-onSurfaceVariant">Jan 2025 - May 2025 · New York, NY</span>
                 </div>
+                <div class="flex flex-wrap gap-2 mt-3">
+                  <span class="px-3 py-1 rounded-full text-xs font-semibold bg-indigo-100 text-indigo-700">PostgreSQL</span>
+                  <span class="px-3 py-1 rounded-full text-xs font-semibold bg-indigo-100 text-indigo-700">React</span>
+                  <span class="px-3 py-1 rounded-full text-xs font-semibold bg-indigo-100 text-indigo-700">Firebase</span>
+                  <span class="px-3 py-1 rounded-full text-xs font-semibold bg-indigo-100 text-indigo-700">Express</span>
+                </div>
                 <ul class="text-onSurfaceVariant mt-3 space-y-2">
                   <li>• Worked on the backend of a consultant reporting and planning platform.</li>
                   <li>• Created JavaScript nodes, designed and tested PostgreSQL queries, optimizing SQL database performance, and ensuring reliable data flow between services.</li>
@@ -162,7 +217,8 @@
               </div>
             </div>
           </article>
-          <article class="bg-white/80 rounded-2xl p-6 reveal" style="--reveal-delay:240ms">
+          <!-- 5. ARobotics -->
+          <article class="bg-white/80 rounded-2xl p-6 reveal" style="--reveal-delay:320ms">
             <div class="flex gap-4 items-start">
               <img src="./assets/arobotics.jpeg" class="w-12 h-12 rounded-xl object-contain bg-white p-1" alt="ARobotics logo" />
               <div class="flex-1">
@@ -170,6 +226,12 @@
                 <div class="flex flex-col md:flex-row md:justify-between md:items-center gap-1">
                   <p class="font-semibold">Software Engineer Intern</p>
                   <span class="font-label text-sm text-onSurfaceVariant">Jan 2021 - Aug 2023 · Ossining, NY</span>
+                </div>
+                <div class="flex flex-wrap gap-2 mt-3">
+                  <span class="px-3 py-1 rounded-full text-xs font-semibold bg-indigo-100 text-indigo-700">OpenCV</span>
+                  <span class="px-3 py-1 rounded-full text-xs font-semibold bg-indigo-100 text-indigo-700">C++</span>
+                  <span class="px-3 py-1 rounded-full text-xs font-semibold bg-indigo-100 text-indigo-700">Thermal Camera</span>
+                  <span class="px-3 py-1 rounded-full text-xs font-semibold bg-indigo-100 text-indigo-700">Django</span>
                 </div>
                 <ul class="text-onSurfaceVariant mt-3 space-y-2">
                   <li>• Utilized Django for the backend, image processing with OpenCV, and motor control with Arduino IDE.</li>
@@ -181,7 +243,7 @@
         </div>
       </section>
 
-      <section class="max-w-7xl mx-auto px-6" id="projects">
+      <section class="max-w-5xl mx-auto px-10" id="projects">
         <div class="reveal">
           <h2 class="text-4xl font-headline font-bold mb-4">Featured Projects</h2>
           <p class="text-onSurfaceVariant mb-6">A showcase of systems and products I have built recently.</p>
@@ -198,263 +260,350 @@
             <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"/></svg>
           </button>
 
-          <!-- Track -->
-          <div class="overflow-hidden rounded-2xl">
-            <div id="proj-inner" class="flex transition-transform duration-500 ease-in-out">
+          <!-- Scrollable track -->
+          <div id="proj-track" class="overflow-x-auto pb-2" style="scrollbar-width:none; -ms-overflow-style:none;">
+            <div id="proj-inner" class="flex gap-5" style="width:max-content;">
 
-        <!-- cards go here, each is w-full shrink-0 -->
-        <div class="w-full shrink-0 grid grid-cols-1 md:grid-cols-2 gap-6">
-
-          <!-- SLIDE 1: ApplyFlow + Propel Earth -->
-          <article class="bg-white/90 rounded-2xl overflow-hidden shadow-sm flex flex-col">
-            <div class="w-full h-56 bg-indigo-50 flex items-center justify-center p-3">
-              <img src="./assets/project-1.png" alt="ApplyFlow.us screenshot" class="w-full h-full object-contain" />
-            </div>
-            <div class="p-6 space-y-3 flex-1">
-              <div class="flex items-start justify-between gap-3">
-                <div>
-                  <h3 class="text-xl font-headline font-bold text-slate-900">ApplyFlow.us</h3>
-                  <p class="font-label text-sm text-onSurfaceVariant">Feb 2026 – Present</p>
+              <!-- Card 1: ApplyFlow -->
+              <article class="bg-white/90 rounded-2xl overflow-hidden shadow-sm flex flex-col" style="width:300px; flex-shrink:0;">
+                <div class="w-full h-48 bg-indigo-50 flex items-center justify-center p-3">
+                  <img src="./assets/project-1.png" alt="ApplyFlow.us screenshot" class="w-full h-full object-contain" />
                 </div>
-                <div class="flex items-center gap-3 mt-1 shrink-0">
-                  <a href="https://applyflow.us" target="_blank" rel="noreferrer" title="Live site" class="text-slate-400 hover:text-primary transition-colors">
-                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
-                  </a>
+                <div class="p-5 space-y-3 flex-1">
+                  <div class="flex items-start justify-between gap-3">
+                    <div>
+                      <h3 class="text-lg font-headline font-bold text-slate-900">ApplyFlow.us</h3>
+                      <p class="font-label text-xs text-onSurfaceVariant">Feb 2026 – Present</p>
+                    </div>
+                    <a href="https://applyflow.us" target="_blank" rel="noreferrer" title="Live site" class="text-slate-400 hover:text-primary transition-colors mt-1 shrink-0">
+                      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+                    </a>
+                  </div>
+                  <div class="flex flex-wrap gap-1.5 font-label text-xs">
+                    <span class="px-2 py-1 bg-indigo-50 text-primary rounded-md">React</span>
+                    <span class="px-2 py-1 bg-indigo-50 text-primary rounded-md">Node.js</span>
+                    <span class="px-2 py-1 bg-indigo-50 text-primary rounded-md">FastAPI</span>
+                    <span class="px-2 py-1 bg-indigo-50 text-primary rounded-md">Supabase</span>
+                  </div>
+                  <p class="text-xs font-label font-semibold text-onSurfaceVariant uppercase tracking-wide">Lead Developer</p>
+                  <ul class="text-onSurfaceVariant text-xs space-y-1.5">
+                    <li>• Full-stack website hosted on EC2, S3, CloudFront, and Supabase to optimize the recruiting process.</li>
+                    <li>• Utilized Kubernetes for a scalable pipeline of containerized scrapers and auto-applying services.</li>
+                  </ul>
                 </div>
-              </div>
-              <div class="flex flex-wrap gap-2 font-label text-xs">
-                <span class="px-2 py-1 bg-indigo-50 text-primary rounded-md">React</span>
-                <span class="px-2 py-1 bg-indigo-50 text-primary rounded-md">Node.js</span>
-                <span class="px-2 py-1 bg-indigo-50 text-primary rounded-md">FastAPI</span>
-                <span class="px-2 py-1 bg-indigo-50 text-primary rounded-md">Supabase</span>
-              </div>
-              <p class="text-xs font-label font-semibold text-onSurfaceVariant uppercase tracking-wide">Lead Developer</p>
-              <ul class="text-onSurfaceVariant text-sm space-y-2">
-                <li>• Individually created a full-stack website hosted using EC2, S3, CloudFront, Cloudflare, and Supabase, optimizing the recruiting process by producing an optimized job list for the user.</li>
-                <li>• Utilized Kubernetes to create a scalable pipeline of containerized scrapers and auto-applying services across EC2 and Supabase.</li>
-              </ul>
-            </div>
-          </article>
+              </article>
 
-          <article class="bg-white/90 rounded-2xl overflow-hidden shadow-sm flex flex-col">
-            <div class="w-full h-56 bg-emerald-50 flex items-center justify-center p-3">
-              <img src="./assets/project-2.png" alt="Propel Earth screenshot" class="w-full h-full object-contain" />
-            </div>
-            <div class="p-6 space-y-3 flex-1">
-              <div class="flex items-start justify-between gap-3">
-                <div>
-                  <h3 class="text-xl font-headline font-bold text-slate-900">Propel Earth</h3>
-                  <p class="font-label text-sm text-onSurfaceVariant">Oct 2025 – Present</p>
+              <!-- Card 2: Propel Earth -->
+              <article class="bg-white/90 rounded-2xl overflow-hidden shadow-sm flex flex-col" style="width:300px; flex-shrink:0;">
+                <div class="w-full h-48 bg-emerald-50 flex items-center justify-center p-3">
+                  <img src="./assets/project-2.png" alt="Propel Earth screenshot" class="w-full h-full object-contain" />
                 </div>
-                <div class="flex items-center gap-3 mt-1 shrink-0">
-                  <a href="https://propel.earth/" target="_blank" rel="noreferrer" title="Live site" class="text-slate-400 hover:text-primary transition-colors">
-                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
-                  </a>
+                <div class="p-5 space-y-3 flex-1">
+                  <div class="flex items-start justify-between gap-3">
+                    <div>
+                      <h3 class="text-lg font-headline font-bold text-slate-900">Propel Earth</h3>
+                      <p class="font-label text-xs text-onSurfaceVariant">Oct 2025 – Present</p>
+                    </div>
+                    <a href="https://propel.earth/" target="_blank" rel="noreferrer" title="Live site" class="text-slate-400 hover:text-primary transition-colors mt-1 shrink-0">
+                      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+                    </a>
+                  </div>
+                  <div class="flex flex-wrap gap-1.5 font-label text-xs">
+                    <span class="px-2 py-1 bg-emerald-50 text-emerald-700 rounded-md">React</span>
+                    <span class="px-2 py-1 bg-emerald-50 text-emerald-700 rounded-md">FastAPI</span>
+                    <span class="px-2 py-1 bg-emerald-50 text-emerald-700 rounded-md">Firebase</span>
+                  </div>
+                  <p class="text-xs font-label font-semibold text-onSurfaceVariant uppercase tracking-wide">Fullstack Developer</p>
+                  <ul class="text-onSurfaceVariant text-xs space-y-1.5">
+                    <li>• Built core features for a marketplace connecting startup founders with service providers.</li>
+                    <li>• Developed full-stack UI components and backend APIs powering marketplace interactions.</li>
+                  </ul>
                 </div>
-              </div>
-              <div class="flex flex-wrap gap-2 font-label text-xs">
-                <span class="px-2 py-1 bg-emerald-50 text-emerald-700 rounded-md">React</span>
-                <span class="px-2 py-1 bg-emerald-50 text-emerald-700 rounded-md">FastAPI</span>
-                <span class="px-2 py-1 bg-emerald-50 text-emerald-700 rounded-md">Firebase</span>
-              </div>
-              <p class="text-xs font-label font-semibold text-onSurfaceVariant uppercase tracking-wide">Fullstack Developer</p>
-              <ul class="text-onSurfaceVariant text-sm space-y-2">
-                <li>• Built and shipped core features for Propel Earth, a marketplace platform connecting startup founders with service providers, implementing user profiles, service listings, and search/discovery functionality.</li>
-                <li>• Worked in a small engineering team to design and develop full-stack web applications across frontend UI components and backend APIs that power marketplace interactions.</li>
-              </ul>
-            </div>
-          </article>
+              </article>
 
-        </div><!-- end slide 1 -->
-
-        <!-- SLIDE 2: Weather ML + Secure Messaging -->
-        <div class="w-full shrink-0 grid grid-cols-1 md:grid-cols-2 gap-6">
-
-          <article class="bg-white/90 rounded-2xl overflow-hidden shadow-sm flex flex-col">
-            <div class="w-full h-56 bg-gradient-to-br from-sky-100 to-blue-200 flex flex-col items-center justify-center gap-2">
-              <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="rgba(255,255,255,0.9)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M17.5 19H9a7 7 0 1 1 6.71-9h1.79a4.5 4.5 0 1 1 0 9z"/></svg>
-              <span class="text-white/80 font-label text-sm font-semibold tracking-wide">Weather ML</span>
-            </div>
-            <div class="p-6 space-y-3 flex-1">
-              <div class="flex items-start justify-between gap-3">
-                <div>
-                  <h3 class="text-xl font-headline font-bold text-slate-900">Weather ML Prediction</h3>
-                  <p class="font-label text-sm text-onSurfaceVariant">2025</p>
+              <!-- Card 3: Weather ML -->
+              <article class="bg-white/90 rounded-2xl overflow-hidden shadow-sm flex flex-col" style="width:300px; flex-shrink:0;">
+                <div class="w-full h-48 bg-gradient-to-br from-sky-100 to-blue-200 flex flex-col items-center justify-center gap-2">
+                  <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="rgba(255,255,255,0.9)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M17.5 19H9a7 7 0 1 1 6.71-9h1.79a4.5 4.5 0 1 1 0 9z"/></svg>
+                  <span class="text-white/80 font-label text-sm font-semibold tracking-wide">Weather ML</span>
                 </div>
-                <div class="flex items-center gap-3 mt-1 shrink-0">
-                  <a href="https://github.com/YardenMorad2003/weather-ml" target="_blank" rel="noreferrer" title="GitHub" class="text-slate-400 hover:text-slate-900 transition-colors">
-                    <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.477 2 2 6.477 2 12c0 4.418 2.865 8.167 6.839 9.49.5.09.682-.217.682-.482 0-.237-.009-.868-.013-1.703-2.782.604-3.369-1.342-3.369-1.342-.454-1.154-1.11-1.461-1.11-1.461-.908-.62.069-.608.069-.608 1.003.07 1.531 1.031 1.531 1.031.892 1.53 2.341 1.088 2.91.832.091-.647.35-1.088.636-1.338-2.22-.253-4.555-1.11-4.555-4.943 0-1.091.39-1.984 1.029-2.683-.103-.253-.446-1.27.098-2.647 0 0 .84-.269 2.75 1.026A9.564 9.564 0 0 1 12 6.844a9.59 9.59 0 0 1 2.504.337c1.909-1.295 2.747-1.026 2.747-1.026.546 1.377.202 2.394.1 2.647.64.699 1.028 1.592 1.028 2.683 0 3.842-2.339 4.687-4.566 4.935.359.309.678.919.678 1.852 0 1.336-.012 2.415-.012 2.743 0 .267.18.576.688.479C19.138 20.163 22 16.418 22 12c0-5.523-4.477-10-10-10z"/></svg>
-                  </a>
+                <div class="p-5 space-y-3 flex-1">
+                  <div class="flex items-start justify-between gap-3">
+                    <div>
+                      <h3 class="text-lg font-headline font-bold text-slate-900">Weather ML Prediction</h3>
+                      <p class="font-label text-xs text-onSurfaceVariant">2025</p>
+                    </div>
+                    <a href="https://github.com/YardenMorad2003/weather-ml" target="_blank" rel="noreferrer" title="GitHub" class="text-slate-400 hover:text-slate-900 transition-colors mt-1 shrink-0">
+                      <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.477 2 2 6.477 2 12c0 4.418 2.865 8.167 6.839 9.49.5.09.682-.217.682-.482 0-.237-.009-.868-.013-1.703-2.782.604-3.369-1.342-3.369-1.342-.454-1.154-1.11-1.461-1.11-1.461-.908-.62.069-.608.069-.608 1.003.07 1.531 1.031 1.531 1.031.892 1.53 2.341 1.088 2.91.832.091-.647.35-1.088.636-1.338-2.22-.253-4.555-1.11-4.555-4.943 0-1.091.39-1.984 1.029-2.683-.103-.253-.446-1.27.098-2.647 0 0 .84-.269 2.75 1.026A9.564 9.564 0 0 1 12 6.844a9.59 9.59 0 0 1 2.504.337c1.909-1.295 2.747-1.026 2.747-1.026.546 1.377.202 2.394.1 2.647.64.699 1.028 1.592 1.028 2.683 0 3.842-2.339 4.687-4.566 4.935.359.309.678.919.678 1.852 0 1.336-.012 2.415-.012 2.743 0 .267.18.576.688.479C19.138 20.163 22 16.418 22 12c0-5.523-4.477-10-10-10z"/></svg>
+                    </a>
+                  </div>
+                  <div class="flex flex-wrap gap-1.5 font-label text-xs">
+                    <span class="px-2 py-1 bg-sky-50 text-sky-700 rounded-md">Python</span>
+                    <span class="px-2 py-1 bg-sky-50 text-sky-700 rounded-md">PyTorch</span>
+                    <span class="px-2 py-1 bg-sky-50 text-sky-700 rounded-md">Streamlit</span>
+                    <span class="px-2 py-1 bg-sky-50 text-sky-700 rounded-md">Open-Meteo</span>
+                  </div>
+                  <p class="text-xs font-label font-semibold text-onSurfaceVariant uppercase tracking-wide">ML Engineer</p>
+                  <ul class="text-onSurfaceVariant text-xs space-y-1.5">
+                    <li>• Trained an LSTM model on real-time Open-Meteo data to forecast short-horizon temperature trends.</li>
+                    <li>• Added configurable training controls and forecast visualization workflows.</li>
+                  </ul>
                 </div>
-              </div>
-              <div class="flex flex-wrap gap-2 font-label text-xs">
-                <span class="px-2 py-1 bg-sky-50 text-sky-700 rounded-md">Python</span>
-                <span class="px-2 py-1 bg-sky-50 text-sky-700 rounded-md">PyTorch</span>
-                <span class="px-2 py-1 bg-sky-50 text-sky-700 rounded-md">Streamlit</span>
-                <span class="px-2 py-1 bg-sky-50 text-sky-700 rounded-md">Open-Meteo API</span>
-              </div>
-              <p class="text-xs font-label font-semibold text-onSurfaceVariant uppercase tracking-wide">ML Engineer</p>
-              <ul class="text-onSurfaceVariant text-sm space-y-2">
-                <li>• Trained an LSTM model on real-time Open-Meteo data to forecast short-horizon temperature trends.</li>
-                <li>• Added configurable training controls and forecast visualization workflows.</li>
-              </ul>
-            </div>
-          </article>
+              </article>
 
-          <article class="bg-white/90 rounded-2xl overflow-hidden shadow-sm flex flex-col">
-            <div class="w-full h-56 bg-gradient-to-br from-slate-600 to-slate-800 flex flex-col items-center justify-center gap-2">
-              <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="rgba(255,255,255,0.9)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
-              <span class="text-white/80 font-label text-sm font-semibold tracking-wide">Secure Messaging</span>
-            </div>
-            <div class="p-6 space-y-3 flex-1">
-              <div class="flex items-start justify-between gap-3">
-                <div>
-                  <h3 class="text-xl font-headline font-bold text-slate-900">Secure Messaging</h3>
-                  <p class="font-label text-sm text-onSurfaceVariant">Mar 2025 – Apr 2025</p>
+              <!-- Card 4: Secure Messaging -->
+              <article class="bg-white/90 rounded-2xl overflow-hidden shadow-sm flex flex-col" style="width:300px; flex-shrink:0;">
+                <div class="w-full h-48 bg-gradient-to-br from-slate-600 to-slate-800 flex flex-col items-center justify-center gap-2">
+                  <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="rgba(255,255,255,0.9)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
+                  <span class="text-white/80 font-label text-sm font-semibold tracking-wide">Secure Messaging</span>
                 </div>
-                <div class="flex items-center gap-3 mt-1 shrink-0">
-                  <a href="https://github.com/david123bob/cybersecurity" target="_blank" rel="noreferrer" title="GitHub" class="text-slate-400 hover:text-slate-900 transition-colors">
-                    <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.477 2 2 6.477 2 12c0 4.418 2.865 8.167 6.839 9.49.5.09.682-.217.682-.482 0-.237-.009-.868-.013-1.703-2.782.604-3.369-1.342-3.369-1.342-.454-1.154-1.11-1.461-1.11-1.461-.908-.62.069-.608.069-.608 1.003.07 1.531 1.031 1.531 1.031.892 1.53 2.341 1.088 2.91.832.091-.647.35-1.088.636-1.338-2.22-.253-4.555-1.11-4.555-4.943 0-1.091.39-1.984 1.029-2.683-.103-.253-.446-1.27.098-2.647 0 0 .84-.269 2.75 1.026A9.564 9.564 0 0 1 12 6.844a9.59 9.59 0 0 1 2.504.337c1.909-1.295 2.747-1.026 2.747-1.026.546 1.377.202 2.394.1 2.647.64.699 1.028 1.592 1.028 2.683 0 3.842-2.339 4.687-4.566 4.935.359.309.678.919.678 1.852 0 1.336-.012 2.415-.012 2.743 0 .267.18.576.688.479C19.138 20.163 22 16.418 22 12c0-5.523-4.477-10-10-10z"/></svg>
-                  </a>
+                <div class="p-5 space-y-3 flex-1">
+                  <div class="flex items-start justify-between gap-3">
+                    <div>
+                      <h3 class="text-lg font-headline font-bold text-slate-900">Secure Messaging</h3>
+                      <p class="font-label text-xs text-onSurfaceVariant">Mar – Apr 2025</p>
+                    </div>
+                    <a href="https://github.com/david123bob/cybersecurity" target="_blank" rel="noreferrer" title="GitHub" class="text-slate-400 hover:text-slate-900 transition-colors mt-1 shrink-0">
+                      <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.477 2 2 6.477 2 12c0 4.418 2.865 8.167 6.839 9.49.5.09.682-.217.682-.482 0-.237-.009-.868-.013-1.703-2.782.604-3.369-1.342-3.369-1.342-.454-1.154-1.11-1.461-1.11-1.461-.908-.62.069-.608.069-.608 1.003.07 1.531 1.031 1.531 1.031.892 1.53 2.341 1.088 2.91.832.091-.647.35-1.088.636-1.338-2.22-.253-4.555-1.11-4.555-4.943 0-1.091.39-1.984 1.029-2.683-.103-.253-.446-1.27.098-2.647 0 0 .84-.269 2.75 1.026A9.564 9.564 0 0 1 12 6.844a9.59 9.59 0 0 1 2.504.337c1.909-1.295 2.747-1.026 2.747-1.026.546 1.377.202 2.394.1 2.647.64.699 1.028 1.592 1.028 2.683 0 3.842-2.339 4.687-4.566 4.935.359.309.678.919.678 1.852 0 1.336-.012 2.415-.012 2.743 0 .267.18.576.688.479C19.138 20.163 22 16.418 22 12c0-5.523-4.477-10-10-10z"/></svg>
+                    </a>
+                  </div>
+                  <div class="flex flex-wrap gap-1.5 font-label text-xs">
+                    <span class="px-2 py-1 bg-slate-100 text-slate-700 rounded-md">Go</span>
+                    <span class="px-2 py-1 bg-slate-100 text-slate-700 rounded-md">Chatterbox</span>
+                    <span class="px-2 py-1 bg-slate-100 text-slate-700 rounded-md">Cryptography</span>
+                  </div>
+                  <p class="text-xs font-label font-semibold text-onSurfaceVariant uppercase tracking-wide">Designer</p>
+                  <ul class="text-onSurfaceVariant text-xs space-y-1.5">
+                    <li>• Implemented Signal-style secure messaging using Triple DH handshake and double ratchet with NIST P-256 / AES-GCM.</li>
+                    <li>• Achieved forward secrecy, deniable authentication, and out-of-order message resilience.</li>
+                  </ul>
                 </div>
-              </div>
-              <div class="flex flex-wrap gap-2 font-label text-xs">
-                <span class="px-2 py-1 bg-slate-100 text-slate-700 rounded-md">Go</span>
-                <span class="px-2 py-1 bg-slate-100 text-slate-700 rounded-md">Chatterbox</span>
-                <span class="px-2 py-1 bg-slate-100 text-slate-700 rounded-md">Cryptography</span>
-              </div>
-              <p class="text-xs font-label font-semibold text-onSurfaceVariant uppercase tracking-wide">Designer</p>
-              <ul class="text-onSurfaceVariant text-sm space-y-2">
-                <li>• Implemented Signal-style secure messaging using Triple DH handshake and double ratchet with NIST P-256 / AES-GCM.</li>
-                <li>• Achieved forward secrecy, deniable authentication, and resilience to out-of-order messages.</li>
-              </ul>
-            </div>
-          </article>
+              </article>
 
-        </div><!-- end slide 2 -->
-
-        <!-- SLIDE 3: Tech Treks + Automated Texter -->
-        <div class="w-full shrink-0 grid grid-cols-1 md:grid-cols-2 gap-6">
-
-          <article class="bg-white/90 rounded-2xl overflow-hidden shadow-sm flex flex-col">
-            <div class="w-full h-56 bg-gradient-to-br from-violet-50 to-purple-100 flex items-center justify-center">
-              <span class="text-6xl font-headline font-bold text-purple-200">TT</span>
-            </div>
-            <div class="p-6 space-y-3 flex-1">
-              <div class="flex items-start justify-between gap-3">
-                <div>
-                  <h3 class="text-xl font-headline font-bold text-slate-900">Tech Treks</h3>
-                  <p class="font-label text-sm text-onSurfaceVariant">2025</p>
+              <!-- Card 5: Tech Treks -->
+              <article class="bg-white/90 rounded-2xl overflow-hidden shadow-sm flex flex-col" style="width:300px; flex-shrink:0;">
+                <div class="w-full h-48 bg-gradient-to-br from-violet-50 to-purple-100 flex items-center justify-center">
+                  <span class="text-5xl font-headline font-bold text-purple-200">TT</span>
                 </div>
-                <div class="flex items-center gap-3 mt-1 shrink-0">
-                  <a href="https://github.com/david123bob/techtrecks" target="_blank" rel="noreferrer" title="GitHub" class="text-slate-400 hover:text-slate-900 transition-colors">
-                    <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.477 2 2 6.477 2 12c0 4.418 2.865 8.167 6.839 9.49.5.09.682-.217.682-.482 0-.237-.009-.868-.013-1.703-2.782.604-3.369-1.342-3.369-1.342-.454-1.154-1.11-1.461-1.11-1.461-.908-.62.069-.608.069-.608 1.003.07 1.531 1.031 1.531 1.031.892 1.53 2.341 1.088 2.91.832.091-.647.35-1.088.636-1.338-2.22-.253-4.555-1.11-4.555-4.943 0-1.091.39-1.984 1.029-2.683-.103-.253-.446-1.27.098-2.647 0 0 .84-.269 2.75 1.026A9.564 9.564 0 0 1 12 6.844a9.59 9.59 0 0 1 2.504.337c1.909-1.295 2.747-1.026 2.747-1.026.546 1.377.202 2.394.1 2.647.64.699 1.028 1.592 1.028 2.683 0 3.842-2.339 4.687-4.566 4.935.359.309.678.919.678 1.852 0 1.336-.012 2.415-.012 2.743 0 .267.18.576.688.479C19.138 20.163 22 16.418 22 12c0-5.523-4.477-10-10-10z"/></svg>
-                  </a>
+                <div class="p-5 space-y-3 flex-1">
+                  <div class="flex items-start justify-between gap-3">
+                    <div>
+                      <h3 class="text-lg font-headline font-bold text-slate-900">Tech Treks</h3>
+                      <p class="font-label text-xs text-onSurfaceVariant">2025</p>
+                    </div>
+                    <a href="https://github.com/david123bob/techtrecks" target="_blank" rel="noreferrer" title="GitHub" class="text-slate-400 hover:text-slate-900 transition-colors mt-1 shrink-0">
+                      <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.477 2 2 6.477 2 12c0 4.418 2.865 8.167 6.839 9.49.5.09.682-.217.682-.482 0-.237-.009-.868-.013-1.703-2.782.604-3.369-1.342-3.369-1.342-.454-1.154-1.11-1.461-1.11-1.461-.908-.62.069-.608.069-.608 1.003.07 1.531 1.031 1.531 1.031.892 1.53 2.341 1.088 2.91.832.091-.647.35-1.088.636-1.338-2.22-.253-4.555-1.11-4.555-4.943 0-1.091.39-1.984 1.029-2.683-.103-.253-.446-1.27.098-2.647 0 0 .84-.269 2.75 1.026A9.564 9.564 0 0 1 12 6.844a9.59 9.59 0 0 1 2.504.337c1.909-1.295 2.747-1.026 2.747-1.026.546 1.377.202 2.394.1 2.647.64.699 1.028 1.592 1.028 2.683 0 3.842-2.339 4.687-4.566 4.935.359.309.678.919.678 1.852 0 1.336-.012 2.415-.012 2.743 0 .267.18.576.688.479C19.138 20.163 22 16.418 22 12c0-5.523-4.477-10-10-10z"/></svg>
+                    </a>
+                  </div>
+                  <div class="flex flex-wrap gap-1.5 font-label text-xs">
+                    <span class="px-2 py-1 bg-violet-50 text-violet-700 rounded-md">React</span>
+                    <span class="px-2 py-1 bg-violet-50 text-violet-700 rounded-md">Node.js</span>
+                    <span class="px-2 py-1 bg-violet-50 text-violet-700 rounded-md">OpenAI</span>
+                  </div>
+                  <p class="text-xs font-label font-semibold text-onSurfaceVariant uppercase tracking-wide">Project Lead / Mentor</p>
+                  <ul class="text-onSurfaceVariant text-xs space-y-1.5">
+                    <li>• Led a team of 3 to build a Chrome extension tracking online food ingredients with AI-powered suggestions.</li>
+                    <li>• Mentored students through Agile planning, debugging, and professional development.</li>
+                  </ul>
                 </div>
-              </div>
-              <div class="flex flex-wrap gap-2 font-label text-xs">
-                <span class="px-2 py-1 bg-violet-50 text-violet-700 rounded-md">React</span>
-                <span class="px-2 py-1 bg-violet-50 text-violet-700 rounded-md">Node.js</span>
-                <span class="px-2 py-1 bg-violet-50 text-violet-700 rounded-md">OpenAI</span>
-              </div>
-              <p class="text-xs font-label font-semibold text-onSurfaceVariant uppercase tracking-wide">Project Lead / Mentor</p>
-              <ul class="text-onSurfaceVariant text-sm space-y-2">
-                <li>• Led a team of 3 to build a Chrome extension tracking online food ingredients with AI-powered suggestions.</li>
-                <li>• Mentored students through Agile planning, debugging, and professional development.</li>
-              </ul>
-            </div>
-          </article>
+              </article>
 
-          <article class="bg-white/90 rounded-2xl overflow-hidden shadow-sm flex flex-col">
-            <div class="w-full h-56 bg-gradient-to-br from-amber-50 to-orange-100 flex items-center justify-center">
-              <span class="text-6xl font-headline font-bold text-orange-200">AT</span>
-            </div>
-            <div class="p-6 space-y-3 flex-1">
-              <div class="flex items-start justify-between gap-3">
-                <div>
-                  <h3 class="text-xl font-headline font-bold text-slate-900">Automated Texter</h3>
-                  <p class="font-label text-sm text-onSurfaceVariant">Sept – Oct 2022</p>
+              <!-- Card 6: Automated Texter -->
+              <article class="bg-white/90 rounded-2xl overflow-hidden shadow-sm flex flex-col" style="width:300px; flex-shrink:0;">
+                <div class="w-full h-48 bg-gradient-to-br from-amber-50 to-orange-100 flex items-center justify-center">
+                  <span class="text-5xl font-headline font-bold text-orange-200">AT</span>
                 </div>
-              </div>
-              <div class="flex flex-wrap gap-2 font-label text-xs">
-                <span class="px-2 py-1 bg-amber-50 text-amber-700 rounded-md">Python</span>
-                <span class="px-2 py-1 bg-amber-50 text-amber-700 rounded-md">Pandas</span>
-                <span class="px-2 py-1 bg-amber-50 text-amber-700 rounded-md">Email</span>
-                <span class="px-2 py-1 bg-amber-50 text-amber-700 rounded-md">Twilio</span>
-              </div>
-              <p class="text-xs font-label font-semibold text-onSurfaceVariant uppercase tracking-wide">Personal Project</p>
-              <ul class="text-onSurfaceVariant text-sm space-y-2">
-                <li>• Used email, Pandas, time, and a texter library to automate sending emails and text messages to people potentially interested in the club.</li>
-                <li>• Saved 30+ hours of manual outreach and created an automated system still used by the club today.</li>
-              </ul>
-            </div>
-          </article>
-
-        </div><!-- end slide 3 -->
-
-        <!-- SLIDE 4: Pi Delta Psi -->
-        <div class="w-full shrink-0 grid grid-cols-1 md:grid-cols-2 gap-6">
-
-          <article class="bg-white/90 rounded-2xl overflow-hidden shadow-sm flex flex-col">
-            <div class="w-full h-56 bg-rose-50 flex items-center justify-center p-3">
-              <img src="./assets/project-7.png" alt="Pi Delta Psi website screenshot" class="w-full h-full object-contain" />
-            </div>
-            <div class="p-6 space-y-3 flex-1">
-              <div class="flex items-start justify-between gap-3">
-                <div>
-                  <h3 class="text-xl font-headline font-bold text-slate-900">Pi Delta Psi — NYU Chapter</h3>
-                  <p class="font-label text-sm text-onSurfaceVariant">Nov 2022 – Dec 2022</p>
+                <div class="p-5 space-y-3 flex-1">
+                  <div class="flex items-start justify-between gap-3">
+                    <div>
+                      <h3 class="text-lg font-headline font-bold text-slate-900">Automated Texter</h3>
+                      <p class="font-label text-xs text-onSurfaceVariant">Sept – Oct 2022</p>
+                    </div>
+                  </div>
+                  <div class="flex flex-wrap gap-1.5 font-label text-xs">
+                    <span class="px-2 py-1 bg-amber-50 text-amber-700 rounded-md">Python</span>
+                    <span class="px-2 py-1 bg-amber-50 text-amber-700 rounded-md">Pandas</span>
+                    <span class="px-2 py-1 bg-amber-50 text-amber-700 rounded-md">Email</span>
+                    <span class="px-2 py-1 bg-amber-50 text-amber-700 rounded-md">Twilio</span>
+                  </div>
+                  <p class="text-xs font-label font-semibold text-onSurfaceVariant uppercase tracking-wide">Personal Project</p>
+                  <ul class="text-onSurfaceVariant text-xs space-y-1.5">
+                    <li>• Automated sending emails and texts to club prospects using Pandas and Twilio.</li>
+                    <li>• Saved 30+ hours of manual outreach; system still in use today.</li>
+                  </ul>
                 </div>
-                <div class="flex items-center gap-3 mt-1 shrink-0">
-                  <a href="https://nyupdpsi.org/" target="_blank" rel="noreferrer" title="Live site" class="text-slate-400 hover:text-primary transition-colors">
-                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
-                  </a>
-                </div>
-              </div>
-              <div class="flex flex-wrap gap-2 font-label text-xs">
-                <span class="px-2 py-1 bg-rose-50 text-rose-700 rounded-md">WordPress</span>
-                <span class="px-2 py-1 bg-rose-50 text-rose-700 rounded-md">HTML</span>
-                <span class="px-2 py-1 bg-rose-50 text-rose-700 rounded-md">CSS</span>
-              </div>
-              <p class="text-xs font-label font-semibold text-onSurfaceVariant uppercase tracking-wide">Web Developer</p>
-              <ul class="text-onSurfaceVariant text-sm space-y-2">
-                <li>• Built the official NYU Pi Delta Psi chapter website on WordPress, giving the fraternity an online presence to promote events, membership, and community.</li>
-                <li>• Designed responsive layouts and content pages to help prospective members learn about the organization and get involved.</li>
-              </ul>
-            </div>
-          </article>
+              </article>
 
-        </div><!-- end slide 4 -->
+              <!-- Card 7: Pi Delta Psi -->
+              <article class="bg-white/90 rounded-2xl overflow-hidden shadow-sm flex flex-col" style="width:300px; flex-shrink:0;">
+                <div class="w-full h-48 bg-rose-50 flex items-center justify-center p-3">
+                  <img src="./assets/project-7.png" alt="Pi Delta Psi website screenshot" class="w-full h-full object-contain" />
+                </div>
+                <div class="p-5 space-y-3 flex-1">
+                  <div class="flex items-start justify-between gap-3">
+                    <div>
+                      <h3 class="text-lg font-headline font-bold text-slate-900">Pi Delta Psi — NYU</h3>
+                      <p class="font-label text-xs text-onSurfaceVariant">Nov – Dec 2022</p>
+                    </div>
+                    <a href="https://nyupdpsi.org/" target="_blank" rel="noreferrer" title="Live site" class="text-slate-400 hover:text-primary transition-colors mt-1 shrink-0">
+                      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+                    </a>
+                  </div>
+                  <div class="flex flex-wrap gap-1.5 font-label text-xs">
+                    <span class="px-2 py-1 bg-rose-50 text-rose-700 rounded-md">WordPress</span>
+                    <span class="px-2 py-1 bg-rose-50 text-rose-700 rounded-md">HTML</span>
+                    <span class="px-2 py-1 bg-rose-50 text-rose-700 rounded-md">CSS</span>
+                  </div>
+                  <p class="text-xs font-label font-semibold text-onSurfaceVariant uppercase tracking-wide">Web Developer</p>
+                  <ul class="text-onSurfaceVariant text-xs space-y-1.5">
+                    <li>• Built the official NYU Pi Delta Psi chapter website on WordPress to promote events and membership.</li>
+                    <li>• Designed responsive layouts and content pages for prospective members.</li>
+                  </ul>
+                </div>
+              </article>
 
             </div><!-- end proj-inner -->
-          </div><!-- end overflow-hidden track -->
-
-          <!-- Dot indicators -->
-          <div class="flex justify-center gap-2 mt-5" id="proj-dots">
-            <button class="w-2.5 h-2.5 rounded-full bg-primary transition-all" data-slide="0" aria-label="Slide 1"></button>
-            <button class="w-2.5 h-2.5 rounded-full bg-slate-300 transition-all" data-slide="1" aria-label="Slide 2"></button>
-            <button class="w-2.5 h-2.5 rounded-full bg-slate-300 transition-all" data-slide="2" aria-label="Slide 3"></button>
-            <button class="w-2.5 h-2.5 rounded-full bg-slate-300 transition-all" data-slide="3" aria-label="Slide 4"></button>
-          </div>
+          </div><!-- end scrollable track -->
 
         </div><!-- end relative carousel wrapper -->
       </section>
 
-      <section class="max-w-7xl mx-auto px-6" id="skills">
-        <h2 class="text-4xl font-headline font-bold mb-8 reveal">Technical Proficiency</h2>
-        <div class="flex flex-wrap gap-3 font-label">
-          <span class="px-4 py-2 bg-white rounded-lg reveal" style="--reveal-delay:0ms">Python</span>
-          <span class="px-4 py-2 bg-white rounded-lg reveal" style="--reveal-delay:50ms">TypeScript</span>
-          <span class="px-4 py-2 bg-white rounded-lg reveal" style="--reveal-delay:100ms">Go</span>
-          <span class="px-4 py-2 bg-white rounded-lg reveal" style="--reveal-delay:150ms">React</span>
-          <span class="px-4 py-2 bg-white rounded-lg reveal" style="--reveal-delay:200ms">Node.js</span>
-          <span class="px-4 py-2 bg-white rounded-lg reveal" style="--reveal-delay:250ms">FastAPI</span>
-          <span class="px-4 py-2 bg-white rounded-lg reveal" style="--reveal-delay:300ms">AWS</span>
-          <span class="px-4 py-2 bg-white rounded-lg reveal" style="--reveal-delay:350ms">Docker</span>
+      <section class="max-w-5xl mx-auto px-10" id="skills">
+        <h2 class="text-4xl font-headline font-bold mb-8 reveal">Skills</h2>
+        <div class="space-y-6">
+          <!-- Languages -->
+          <div class="bg-white/80 rounded-2xl p-6 reveal" style="--reveal-delay:0ms">
+            <h3 class="text-sm font-label font-semibold text-onSurfaceVariant uppercase tracking-wider mb-4">Languages</h3>
+            <div class="flex flex-wrap gap-3 font-label">
+              <span class="px-5 py-3 bg-indigo-50 text-indigo-700 rounded-xl font-medium flex items-center gap-2 text-sm">
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/c/c-original.svg" class="w-6 h-6" alt="C" />C
+              </span>
+              <span class="px-5 py-3 bg-indigo-50 text-indigo-700 rounded-xl font-medium flex items-center gap-2 text-sm">
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/cplusplus/cplusplus-original.svg" class="w-6 h-6" alt="C++" />C++
+              </span>
+              <span class="px-5 py-3 bg-indigo-50 text-indigo-700 rounded-xl font-medium flex items-center gap-2 text-sm">
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/python/python-original.svg" class="w-6 h-6" alt="Python" />Python
+              </span>
+              <span class="px-5 py-3 bg-indigo-50 text-indigo-700 rounded-xl font-medium flex items-center gap-2 text-sm">
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/typescript/typescript-original.svg" class="w-6 h-6" alt="TypeScript" />TypeScript
+              </span>
+              <span class="px-5 py-3 bg-indigo-50 text-indigo-700 rounded-xl font-medium flex items-center gap-2 text-sm">
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/javascript/javascript-original.svg" class="w-6 h-6" alt="JavaScript" />JavaScript
+              </span>
+              <span class="px-5 py-3 bg-indigo-50 text-indigo-700 rounded-xl font-medium flex items-center gap-2 text-sm">
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/go/go-original-wordmark.svg" class="w-6 h-6" alt="Go" />Go
+              </span>
+              <span class="px-5 py-3 bg-indigo-50 text-indigo-700 rounded-xl font-medium flex items-center gap-2 text-sm">
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/java/java-original.svg" class="w-6 h-6" alt="Java" />Java
+              </span>
+              <span class="px-5 py-3 bg-indigo-50 text-indigo-700 rounded-xl font-medium flex items-center gap-2 text-sm">
+                <svg class="w-6 h-6" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M4 6h16M4 10h16M4 14h10M4 18h7" stroke="#4f46e5" stroke-width="2" stroke-linecap="round"/></svg>SQL
+              </span>
+              <span class="px-5 py-3 bg-indigo-50 text-indigo-700 rounded-xl font-medium flex items-center gap-2 text-sm">
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/mongodb/mongodb-original.svg" class="w-6 h-6" alt="MongoDB" />MongoDB
+              </span>
+              <span class="px-5 py-3 bg-indigo-50 text-indigo-700 rounded-xl font-medium flex items-center gap-2 text-sm">
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/html5/html5-original.svg" class="w-6 h-6" alt="HTML" />HTML
+              </span>
+              <span class="px-5 py-3 bg-indigo-50 text-indigo-700 rounded-xl font-medium flex items-center gap-2 text-sm">
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/css3/css3-original.svg" class="w-6 h-6" alt="CSS" />CSS
+              </span>
+              <span class="px-5 py-3 bg-indigo-50 text-indigo-700 rounded-xl font-medium flex items-center gap-2 text-sm">
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/visualbasic/visualbasic-plain.svg" class="w-6 h-6" alt="Visual Basic" />Visual Basic
+              </span>
+            </div>
+          </div>
+          <!-- Frameworks & Tools -->
+          <div class="bg-white/80 rounded-2xl p-6 reveal" style="--reveal-delay:80ms">
+            <h3 class="text-sm font-label font-semibold text-onSurfaceVariant uppercase tracking-wider mb-4">Frameworks &amp; Tools</h3>
+            <div class="flex flex-wrap gap-3 font-label">
+              <span class="px-5 py-3 bg-indigo-50 text-indigo-700 rounded-xl font-medium flex items-center gap-2 text-sm">
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/pytorch/pytorch-original.svg" class="w-6 h-6" alt="PyTorch" />PyTorch
+              </span>
+              <span class="px-5 py-3 bg-indigo-50 text-indigo-700 rounded-xl font-medium flex items-center gap-2 text-sm">
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/django/django-plain.svg" class="w-6 h-6" alt="Django" />Django
+              </span>
+              <span class="px-5 py-3 bg-indigo-50 text-indigo-700 rounded-xl font-medium flex items-center gap-2 text-sm">
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/react/react-original.svg" class="w-6 h-6" alt="React" />React
+              </span>
+              <span class="px-5 py-3 bg-indigo-50 text-indigo-700 rounded-xl font-medium flex items-center gap-2 text-sm">
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/react/react-original.svg" class="w-6 h-6" alt="React Native" />React Native
+              </span>
+              <span class="px-5 py-3 bg-indigo-50 text-indigo-700 rounded-xl font-medium flex items-center gap-2 text-sm">
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/nodejs/nodejs-original.svg" class="w-6 h-6" alt="Node.js" />Node.js
+              </span>
+              <span class="px-5 py-3 bg-indigo-50 text-indigo-700 rounded-xl font-medium flex items-center gap-2 text-sm">
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/opencv/opencv-original.svg" class="w-6 h-6" alt="OpenCV" />OpenCV
+              </span>
+              <span class="px-5 py-3 bg-indigo-50 text-indigo-700 rounded-xl font-medium flex items-center gap-2 text-sm">
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/pandas/pandas-original.svg" class="w-6 h-6" alt="Pandas" />Pandas
+              </span>
+              <span class="px-5 py-3 bg-indigo-50 text-indigo-700 rounded-xl font-medium flex items-center gap-2 text-sm">
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/scikitlearn/scikitlearn-original.svg" class="w-6 h-6" alt="scikit-learn" />scikit-learn
+              </span>
+              <span class="px-5 py-3 bg-indigo-50 text-indigo-700 rounded-xl font-medium flex items-center gap-2 text-sm">
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/postgresql/postgresql-original.svg" class="w-6 h-6" alt="PostgreSQL" />PostgreSQL
+              </span>
+              <span class="px-5 py-3 bg-indigo-50 text-indigo-700 rounded-xl font-medium flex items-center gap-2 text-sm">
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/wordpress/wordpress-plain.svg" class="w-6 h-6" alt="WordPress" />WordPress
+              </span>
+              <span class="px-5 py-3 bg-indigo-50 text-indigo-700 rounded-xl font-medium flex items-center gap-2 text-sm">
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/raspberrypi/raspberrypi-original.svg" class="w-6 h-6" alt="Raspberry Pi" />Raspberry Pi
+              </span>
+              <span class="px-5 py-3 bg-indigo-50 text-indigo-700 rounded-xl font-medium flex items-center gap-2 text-sm">
+                <img src="./assets/openai.png" class="w-6 h-6 object-contain" alt="OpenAI" />OpenAI
+              </span>
+              <span class="px-5 py-3 bg-indigo-50 text-indigo-700 rounded-xl font-medium flex items-center gap-2 text-sm">
+                <img src="https://cdn.simpleicons.org/langchain/4f46e5" class="w-6 h-6" alt="LangChain" />LangChain
+              </span>
+              <span class="px-5 py-3 bg-indigo-50 text-indigo-700 rounded-xl font-medium flex items-center gap-2 text-sm">
+                <img src="https://unpkg.com/@lobehub/icons-static-svg@latest/icons/llamaindex.svg" class="w-6 h-6" alt="LlamaParse" />LlamaParse
+              </span>
+              <span class="px-5 py-3 bg-indigo-50 text-indigo-700 rounded-xl font-medium flex items-center gap-2 text-sm">
+                <img src="./assets/bedrock.jpg" class="w-6 h-6 object-contain rounded" alt="AWS Bedrock" />Bedrock
+              </span>
+              <span class="px-5 py-3 bg-indigo-50 text-indigo-700 rounded-xl font-medium flex items-center gap-2 text-sm">
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/linux/linux-original.svg" class="w-6 h-6" alt="Linux" />Linux
+              </span>
+              <span class="px-5 py-3 bg-indigo-50 text-indigo-700 rounded-xl font-medium flex items-center gap-2 text-sm">
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/bash/bash-original.svg" class="w-6 h-6" alt="Bash" />Bash
+              </span>
+            </div>
+          </div>
+          <!-- Infrastructure -->
+          <div class="bg-white/80 rounded-2xl p-6 reveal" style="--reveal-delay:160ms">
+            <h3 class="text-sm font-label font-semibold text-onSurfaceVariant uppercase tracking-wider mb-4">Infrastructure</h3>
+            <div class="flex flex-wrap gap-3 font-label">
+              <span class="px-5 py-3 bg-indigo-50 text-indigo-700 rounded-xl font-medium flex items-center gap-2 text-sm">
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/amazonwebservices/amazonwebservices-original-wordmark.svg" class="w-6 h-6" alt="AWS" />AWS
+              </span>
+              <span class="px-5 py-3 bg-indigo-50 text-indigo-700 rounded-xl font-medium flex items-center gap-2 text-sm">
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/docker/docker-original.svg" class="w-6 h-6" alt="Docker" />Docker
+              </span>
+              <span class="px-5 py-3 bg-indigo-50 text-indigo-700 rounded-xl font-medium flex items-center gap-2 text-sm">
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/kubernetes/kubernetes-original.svg" class="w-6 h-6" alt="Kubernetes" />Kubernetes
+              </span>
+              <span class="px-5 py-3 bg-indigo-50 text-indigo-700 rounded-xl font-medium flex items-center gap-2 text-sm">
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/googlecloud/googlecloud-original.svg" class="w-6 h-6" alt="Google Cloud" />Google Cloud
+              </span>
+              <span class="px-5 py-3 bg-indigo-50 text-indigo-700 rounded-xl font-medium flex items-center gap-2 text-sm">
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/cloudflare/cloudflare-original.svg" class="w-6 h-6" alt="Cloudflare" />Cloudflare
+              </span>
+              <span class="px-5 py-3 bg-indigo-50 text-indigo-700 rounded-xl font-medium flex items-center gap-2 text-sm">
+                <img src="./assets/ec2.png" class="w-6 h-6 object-contain" alt="EC2" />EC2
+              </span>
+              <span class="px-5 py-3 bg-indigo-50 text-indigo-700 rounded-xl font-medium flex items-center gap-2 text-sm">
+                <img src="./assets/s3.jpg" class="w-6 h-6 object-contain rounded" alt="S3" />S3
+              </span>
+              <span class="px-5 py-3 bg-indigo-50 text-indigo-700 rounded-xl font-medium flex items-center gap-2 text-sm">
+                <img src="./assets/cloudfront.png" class="w-6 h-6 object-contain" alt="CloudFront" />CloudFront
+              </span>
+            </div>
+          </div>
         </div>
       </section>
 
-      <section class="max-w-7xl mx-auto px-6" id="education">
+      <section class="max-w-5xl mx-auto px-10" id="education">
         <h2 class="text-4xl font-headline font-bold mb-6 reveal">Education</h2>
         <div class="bg-white rounded-2xl p-8 reveal" style="--reveal-delay:100ms">
           <h3 class="text-2xl font-headline font-bold">New York University</h3>

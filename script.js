@@ -36,31 +36,28 @@ if (yearEl) yearEl.textContent = String(new Date().getFullYear());
 
 // ── Project carousel ───────────────────────────────────────
 (function () {
-  const inner  = document.getElementById("proj-inner");
+  const track  = document.getElementById("proj-track");
   const prev   = document.getElementById("proj-prev");
   const next   = document.getElementById("proj-next");
-  const dots   = document.querySelectorAll("#proj-dots button");
-  if (!inner || !prev || !next) return;
+  if (!track || !prev || !next) return;
 
-  const total = dots.length; // number of slides
-  let cur = 0;
+  const CARD_WIDTH = 300 + 20; // card width + gap
 
-  function goTo(n) {
-    cur = Math.max(0, Math.min(n, total - 1));
-    inner.style.transform = `translateX(-${cur * 100}%)`;
-    dots.forEach((d, i) => {
-      d.classList.toggle("bg-primary",   i === cur);
-      d.classList.toggle("bg-slate-300", i !== cur);
-    });
-    prev.disabled = cur === 0;
-    next.disabled = cur === total - 1;
+  function updateArrows() {
+    prev.disabled = track.scrollLeft <= 0;
+    next.disabled = track.scrollLeft >= track.scrollWidth - track.clientWidth - 4;
   }
 
-  prev.addEventListener("click", () => goTo(cur - 1));
-  next.addEventListener("click", () => goTo(cur + 1));
-  dots.forEach(d => d.addEventListener("click", () => goTo(+d.dataset.slide)));
+  prev.addEventListener("click", () => {
+    track.scrollBy({ left: -CARD_WIDTH, behavior: "smooth" });
+  });
 
-  goTo(0); // initialise
+  next.addEventListener("click", () => {
+    track.scrollBy({ left: CARD_WIDTH, behavior: "smooth" });
+  });
+
+  track.addEventListener("scroll", updateArrows);
+  updateArrows();
 })();
 
 // ── Scroll reveal (Intersection Observer) ─────────────────

@@ -1,0 +1,30 @@
+/* ── Snake game styles ─────────────────────────────────────── */
+
+#game-canvas {
+  display: block;
+  margin: 0 auto;
+  width: 100%;
+  max-width: 560px;
+  aspect-ratio: 1;
+  border-radius: 16px;
+  box-shadow: 0 20px 60px rgba(70, 72, 212, 0.2);
+  image-rendering: pixelated;
+}
+
+/* Keyboard badge */
+kbd {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: #fff;
+  border: 2px solid #e2e8f0;
+  border-radius: 6px;
+  padding: 2px 7px;
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 11px;
+  font-weight: 600;
+  color: #464554;
+  box-shadow: 0 2px 0 #c7c4d7;
+  min-width: 26px;
+  text-align: center;
+}
